@@ -1,29 +1,24 @@
 import React, { ReactElement, useEffect, useRef } from 'react';
 import PersonSleepFun from '../personSleepFun';
 import { connect } from 'react-redux';
-import withStyles, { WithStylesProps } from 'react-jss';
+import withStyles, { WithStylesProps, createUseStyles } from 'react-jss';
+import styles from './Style';
 
-interface IProps {
+type Classes = WithStylesProps<typeof styles>;
+
+interface IProps extends Classes {
     label?: string;
 }
 
-const Loading = ({ label }: IProps): ReactElement => {
+const Loading = ({ label, classes }: IProps): ReactElement => {
     const loadingLabel = label || 'Loading';
 
     return (
-        <div
-            id="loading-page"
-            className="lex hh"
-            style={{
-                width: '100%',
-                alignItems: 'center',
-                justifyContent: 'center',
-            }}
-        >
-            <div className="text">Loading...</div>
-            <PersonSleepFun />
+        <div className={classes.Loading}>
+            <div className={classes.Label}>Loading...</div>
+            <PersonSleepFun className={classes.SleepPerson} />
         </div>
     );
 };
 
-export default Loading;
+export default withStyles(styles)(Loading);

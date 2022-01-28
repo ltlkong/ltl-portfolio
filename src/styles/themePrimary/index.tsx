@@ -1,5 +1,6 @@
 const themePrimary = {
-    colorPrimary: 'orange',
+    colorPrimary: 'rgb(213, 217, 224)',
+    textColorPrimary: 'rgb(0, 30, 56)',
 };
 
 export default themePrimary;

@@ -1,6 +1,6 @@
 .fade-enter {
     opacity: 0;
-    transform: translate(0, 25px);
+    transform: translate(0, -40px);
     z-index: 1;
 }
 .fade-enter-active {
@@ -15,7 +15,7 @@
 }
 .fade-exit-active {
     opacity: 0;
-    transform: translate(0, 30px);
+    transform: translate(0, 20px);
 
     transition: opacity 250ms ease-out, transform 300ms ease;
 }

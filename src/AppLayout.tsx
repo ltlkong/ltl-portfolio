@@ -24,7 +24,6 @@ interface IAppLayoutProps extends StateToProps, DispatchToProps, Classes {}
 const AppLayout = ({
     isLoading,
     loadingLabel,
-    startLoading,
     stopLoading,
     classes,
 }: IAppLayoutProps): ReactElement => {
@@ -33,20 +32,13 @@ const AppLayout = ({
     useEffect(() => {
         setTimeout(() => {
             stopLoading();
-        }, 1000);
+        }, 3000);
     }, []);
 
-    if (isLoading) return <Loading />;
+    if (isLoading) return <Loading label={loadingLabel} />;
 
     return (
         <>
-            <NavBar>
-                {links.map((props, key) => (
-                    <Link key={key} to={props.to}>
-                        {props.name}
-                    </Link>
-                ))}
-            </NavBar>
             <TransitionGroup component={null}>
                 <CSSTransition
                     classNames={'fade'}
@@ -60,12 +52,18 @@ const AppLayout = ({
                     </Routes>
                 </CSSTransition>
             </TransitionGroup>
+            <NavBar className={classes.Nav}>
+                {links.map((props, key) => (
+                    <Link key={key} to={props.to}>
+                        {props.name}
+                    </Link>
+                ))}
+            </NavBar>
         </>
     );
 };
 
 const mapDispatchToProps = {
-    startLoading,
     stopLoading,
 };
 

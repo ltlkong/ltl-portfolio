@@ -1,8 +1,12 @@
 import { ThemePrimary } from '../../styles/themePrimary';
 
 const styles = (theme: ThemePrimary) => ({
-    nav: {
-        color: 'darkgrey',
+    Nav: {
+        position: 'fixed',
+        '& a': {
+            color: theme.textColorPrimary,
+            textDecoraion: 'none',
+        },
     },
 });
 

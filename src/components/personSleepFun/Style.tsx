@@ -20,24 +20,22 @@ const styles = {
     },
     PersonSleepFun: {
         ...size(7, 10),
-        ...position(0, 0),
         position: 'absolute',
-        fontSize: '25px',
         '& div': {
             position: 'relative',
-            backgroundColor: 'black',
         },
         '& div:first-child': {
             ...position(1.8, -0.8),
             ...size(3.3, 3),
-            border: '0.1em solid black',
+            borderWidth: '0.1em',
+            borderStyle: 'solid',
             borderRadius: '50%',
             backgroundColor: 'transparent',
             transformOrigin: '40% 90%',
             transform: 'rotate(40deg)',
         },
         '& div:first-child:after ': {
-            content: 'Z',
+            content: '"Z"',
             fontWeight: 600,
             position: ' relative',
             animation: '$personFunSleepZ 1.5s infinite linear',

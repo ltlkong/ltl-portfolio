@@ -1,6 +1,5 @@
 import React, { ReactElement, useEffect } from 'react';
-import { createUseStyles, useTheme } from 'react-jss';
-import { ThemePrimary } from './styles/theme-primary';
+import withStyles, { WithStylesProps } from 'react-jss';
 import {
     toggleLoading,
     startLoading,
@@ -8,65 +7,64 @@ import {
 } from './actions/loadingActions';
 import { IRootState } from './store';
 import { connect } from 'react-redux';
-
-interface IStyles {
-    theme: ThemePrimary;
-}
+import styles from './styles/themePrimary/AppLayoutStyle';
+import { Routes, Route, Link, useLocation } from 'react-router-dom';
+import routes from './routes';
+import links from './routes/links';
+import { TransitionGroup, CSSTransition } from 'react-transition-group';
+import NavBar from './components/navBar';
+import Loading from './components/loading';
 
 type StateToProps = ReturnType<typeof mapStateToProps>;
 type DispatchToProps = typeof mapDispatchToProps;
+type Classes = WithStylesProps<typeof styles>;
 
-const useStyles = createUseStyles({
-    button: {
-        backgroundColor: ({ theme }: IStyles) => theme.colorPrimary,
-    },
-    container: {
-        display: 'flex',
-        justifyContent: 'center',
-    },
-});
-
-interface IAppLayoutProps extends StateToProps, DispatchToProps {}
+interface IAppLayoutProps extends StateToProps, DispatchToProps, Classes {}
 
 const AppLayout = ({
     isLoading,
     loadingLabel,
-    toggleLoading,
     startLoading,
     stopLoading,
+    classes,
 }: IAppLayoutProps): ReactElement => {
-    const theme = useTheme<ThemePrimary>();
-    const classes = useStyles({ theme });
+    const location = useLocation();
+
+    useEffect(() => {
+        setTimeout(() => {
+            stopLoading();
+        }, 1000);
+    }, []);
+
+    if (isLoading) return <Loading />;
 
     return (
-        <div>
-            <h1>{isLoading ? loadingLabel : 'Done'}</h1>
-            <div className={classes.container}>
-                <button
-                    className={classes.button}
-                    onClick={() => toggleLoading()}
+        <>
+            <NavBar>
+                {links.map((props, key) => (
+                    <Link key={key} to={props.to}>
+                        {props.name}
+                    </Link>
+                ))}
+            </NavBar>
+            <TransitionGroup component={null}>
+                <CSSTransition
+                    classNames={'fade'}
+                    key={location.key}
+                    timeout={300}
                 >
-                    Toggle
-                </button>
-                <button
-                    className={classes.button}
-                    onClick={() => startLoading()}
-                >
-                    Start
-                </button>
-                <button
-                    className={classes.button}
-                    onClick={() => stopLoading()}
-                >
-                    Stop
-                </button>
-            </div>
-        </div>
+                    <Routes location={location}>
+                        {routes.map((props, key) => (
+                            <Route key={key} {...props} />
+                        ))}
+                    </Routes>
+                </CSSTransition>
+            </TransitionGroup>
+        </>
     );
 };
 
 const mapDispatchToProps = {
-    toggleLoading,
     startLoading,
     stopLoading,
 };
@@ -76,4 +74,7 @@ const mapStateToProps = ({ loading: { isLoading, label } }: IRootState) => ({
     loadingLabel: label,
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(AppLayout);
+export default connect(
+    mapStateToProps,
+    mapDispatchToProps
+)(withStyles(styles)(AppLayout));

@@ -29,10 +29,16 @@ const loadingReducer = (
             };
             break;
         case 'STOP':
-            return { ...state, isLoading: false };
+            return {
+                isLoading: false,
+                label: payload || state.label,
+            };
             break;
         case 'START':
-            return { ...state, isLoading: true };
+            return {
+                isLoading: true,
+                label: payload || state.label,
+            };
             break;
         default:
             return state;

@@ -4,7 +4,8 @@ import { Provider } from 'react-redux';
 import { PersistGate } from 'redux-persist/integration/react';
 import AppLayout from './AppLayout';
 import { store, persistor } from './store';
-import themePrimary from './styles/theme-primary';
+import themePrimary from './styles/themePrimary';
+import { BrowserRouter as Router } from 'react-router-dom';
 
 function App() {
     return (
@@ -12,7 +13,9 @@ function App() {
             <PersistGate loading={null} persistor={persistor}>
                 <JssProvider classNamePrefix="ltl-">
                     <ThemeProvider theme={themePrimary}>
-                        <AppLayout />
+                        <Router>
+                            <AppLayout />
+                        </Router>
                     </ThemeProvider>
                 </JssProvider>
             </PersistGate>

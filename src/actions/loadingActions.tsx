@@ -10,13 +10,13 @@ const toggleLoading = (props?: IToggleLoadingProps) => {
 };
 const startLoading = (props?: IToggleLoadingProps) => {
     return {
-        type: 'STOP',
+        type: 'START',
         payload: props?.label,
     };
 };
 const stopLoading = (props?: IToggleLoadingProps) => {
     return {
-        type: 'START',
+        type: 'STOP',
         payload: props?.label,
     };
 };

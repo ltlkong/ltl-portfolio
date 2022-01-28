@@ -11,11 +11,11 @@ interface IProps extends Classes {
 }
 
 const Loading = ({ label, classes }: IProps): ReactElement => {
-    const loadingLabel = label || 'Loading';
+    const loadingLabel = label;
 
     return (
         <div className={classes.Loading}>
-            <div className={classes.Label}>Loading...</div>
+            <div className={classes.Label}>{label}</div>
             <PersonSleepFun className={classes.SleepPerson} />
         </div>
     );

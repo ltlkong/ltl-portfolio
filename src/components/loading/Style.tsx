@@ -24,7 +24,6 @@ const styles = (theme: ThemePrimary) => ({
         '& span': {
             display: 'inline-block',
             animation: '$flip 2s infinite',
-            color: theme.colorSecondary,
         },
     },
 

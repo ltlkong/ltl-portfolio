@@ -2,8 +2,11 @@ import { ThemePrimary } from './';
 
 const styles = (theme: ThemePrimary) => ({
     Home: {
-        backgroundColor: 'blue',
+        backgroundColor: theme.colorSecondary,
         height: '100vh',
+        '& h1': {
+            margin: 0,
+        },
     },
 });
 

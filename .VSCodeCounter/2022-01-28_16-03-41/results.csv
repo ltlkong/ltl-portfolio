@@ -1,0 +1,32 @@
+"filename", "language", "JSON with Comments", "JSON", "Markdown", "Django txt", "Django HTML", "TypeScript React", "CSS", "comment", "blank", "total"
+"/Users/tielinli/Workspace/tielin-li/.vim/coc-settings.json", "JSON", 0, 7, 0, 0, 0, 0, 0, 0, 0, 7
+"/Users/tielinli/Workspace/tielin-li/README.md", "Markdown", 0, 0, 26, 0, 0, 0, 0, 0, 21, 47
+"/Users/tielinli/Workspace/tielin-li/package-lock.json", "JSON", 0, 27202, 0, 0, 0, 0, 0, 0, 1, 27203
+"/Users/tielinli/Workspace/tielin-li/package.json", "JSON", 0, 54, 0, 0, 0, 0, 0, 0, 1, 55
+"/Users/tielinli/Workspace/tielin-li/public/index.html", "Django HTML", 0, 0, 0, 0, 40, 0, 0, 0, 4, 44
+"/Users/tielinli/Workspace/tielin-li/public/manifest.json", "JSON", 0, 25, 0, 0, 0, 0, 0, 0, 1, 26
+"/Users/tielinli/Workspace/tielin-li/public/robots.txt", "Django txt", 0, 0, 0, 3, 0, 0, 0, 0, 1, 4
+"/Users/tielinli/Workspace/tielin-li/src/App.tsx", "TypeScript React", 0, 0, 0, 0, 0, 24, 0, 0, 3, 27
+"/Users/tielinli/Workspace/tielin-li/src/AppLayout.tsx", "TypeScript React", 0, 0, 0, 0, 0, 69, 0, 0, 10, 79
+"/Users/tielinli/Workspace/tielin-li/src/actions/loadingActions.tsx", "TypeScript React", 0, 0, 0, 0, 0, 22, 0, 0, 3, 25
+"/Users/tielinli/Workspace/tielin-li/src/components/loading/Style.tsx", "TypeScript React", 0, 0, 0, 0, 0, 29, 0, 0, 4, 33
+"/Users/tielinli/Workspace/tielin-li/src/components/loading/index.tsx", "TypeScript React", 0, 0, 0, 0, 0, 19, 0, 0, 6, 25
+"/Users/tielinli/Workspace/tielin-li/src/components/navBar/Style.tsx", "TypeScript React", 0, 0, 0, 0, 0, 11, 0, 0, 3, 14
+"/Users/tielinli/Workspace/tielin-li/src/components/navBar/index.tsx", "TypeScript React", 0, 0, 0, 0, 0, 12, 0, 0, 4, 16
+"/Users/tielinli/Workspace/tielin-li/src/components/personSleepFun/Style.tsx", "TypeScript React", 0, 0, 0, 0, 0, 83, 0, 0, 11, 94
+"/Users/tielinli/Workspace/tielin-li/src/components/personSleepFun/index.tsx", "TypeScript React", 0, 0, 0, 0, 0, 15, 0, 0, 5, 20
+"/Users/tielinli/Workspace/tielin-li/src/index.css", "CSS", 0, 0, 0, 0, 0, 0, 19, 0, 3, 22
+"/Users/tielinli/Workspace/tielin-li/src/index.tsx", "TypeScript React", 0, 0, 0, 0, 0, 6, 0, 0, 2, 8
+"/Users/tielinli/Workspace/tielin-li/src/pages/BlogPage.tsx", "TypeScript React", 0, 0, 0, 0, 0, 5, 0, 0, 3, 8
+"/Users/tielinli/Workspace/tielin-li/src/pages/HomePage.tsx", "TypeScript React", 0, 0, 0, 0, 0, 46, 0, 0, 8, 54
+"/Users/tielinli/Workspace/tielin-li/src/pages/NotFoundPage.tsx", "TypeScript React", 0, 0, 0, 0, 0, 5, 0, 0, 3, 8
+"/Users/tielinli/Workspace/tielin-li/src/reducers/index.tsx", "TypeScript React", 0, 0, 0, 0, 0, 6, 0, 0, 3, 9
+"/Users/tielinli/Workspace/tielin-li/src/reducers/loadingReducer.tsx", "TypeScript React", 0, 0, 0, 0, 0, 42, 0, 0, 7, 49
+"/Users/tielinli/Workspace/tielin-li/src/routes/index.tsx", "TypeScript React", 0, 0, 0, 0, 0, 10, 0, 0, 3, 13
+"/Users/tielinli/Workspace/tielin-li/src/routes/links.tsx", "TypeScript React", 0, 0, 0, 0, 0, 8, 0, 0, 2, 10
+"/Users/tielinli/Workspace/tielin-li/src/store.tsx", "TypeScript React", 0, 0, 0, 0, 0, 16, 0, 0, 6, 22
+"/Users/tielinli/Workspace/tielin-li/src/styles/themePrimary/AppLayoutStyle.tsx", "TypeScript React", 0, 0, 0, 0, 0, 22, 0, 0, 4, 26
+"/Users/tielinli/Workspace/tielin-li/src/styles/themePrimary/HomePageStyle.tsx", "TypeScript React", 0, 0, 0, 0, 0, 8, 0, 0, 3, 11
+"/Users/tielinli/Workspace/tielin-li/src/styles/themePrimary/index.tsx", "TypeScript React", 0, 0, 0, 0, 0, 6, 0, 0, 3, 9
+"/Users/tielinli/Workspace/tielin-li/tsconfig.json", "JSON with Comments", 26, 0, 0, 0, 0, 0, 0, 0, 1, 27
+"Total", "-", 26, 27288, 26, 3, 40, 464, 19, 0, 129, 27995

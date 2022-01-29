@@ -10,12 +10,18 @@ interface IProps extends Classes {
     label?: string;
 }
 
-const Loading = ({ label, classes }: IProps): ReactElement => {
+const Loading = ({ label = '', classes }: IProps): ReactElement => {
     const loadingLabel = label;
 
     return (
         <div className={classes.Loading}>
-            <div className={classes.Label}>{label}</div>
+            <div className={classes.Label}>
+                {label.split('').map((value, i) => (
+                    <span key={i} style={{ animationDelay: 0.2 * i + 's' }}>
+                        {value}
+                    </span>
+                ))}
+            </div>
             <PersonSleepFun className={classes.SleepPerson} />
         </div>
     );

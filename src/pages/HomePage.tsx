@@ -4,6 +4,7 @@ import withStyles, { WithStylesProps } from 'react-jss';
 import { toggleLoading } from '../actions/loadingActions';
 import { IRootState } from '../store';
 import { connect } from 'react-redux';
+import Markdown from '../components/markdown';
 
 type DispatchToProps = typeof mapDispatchToProps;
 type StateToProps = ReturnType<typeof mapStateToProps>;
@@ -34,6 +35,10 @@ const HomePage = ({
             >
                 Toggle Loading
             </button>
+            <Markdown>
+                Hey, I'm **Tielin Li**. I'm a **developer** working on Pollard
+                Banknote.
+            </Markdown>
         </main>
     );
 };

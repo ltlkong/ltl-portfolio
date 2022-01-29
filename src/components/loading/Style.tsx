@@ -1,6 +1,11 @@
 import { ThemePrimary } from '../../styles/themePrimary';
 
 const styles = (theme: ThemePrimary) => ({
+    '@keyframes flip': {
+        '0%,80%': {
+            transform: 'rotateY(360deg) ',
+        },
+    },
     Loading: {
         position: 'absolute',
         left: 0,
@@ -15,7 +20,14 @@ const styles = (theme: ThemePrimary) => ({
     Label: {
         fontSize: '3rem',
         color: theme.textColorPrimary,
+
+        '& span': {
+            display: 'inline-block',
+            animation: '$flip 2s infinite',
+            color: theme.colorSecondary,
+        },
     },
+
     SleepPerson: {
         left: 0,
         bottom: 0,

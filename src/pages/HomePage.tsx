@@ -5,6 +5,7 @@ import { toggleLoading } from '../actions/loadingActions';
 import { IRootState } from '../store';
 import { connect } from 'react-redux';
 import Markdown from '../components/markdown';
+import Loading from '../components/loading';
 
 type DispatchToProps = typeof mapDispatchToProps;
 type StateToProps = ReturnType<typeof mapStateToProps>;
@@ -39,6 +40,7 @@ const HomePage = ({
                 Hey, I'm **Tielin Li**. I'm a **developer** working on Pollard
                 Banknote.
             </Markdown>
+            <div>{isLoading && <Loading label={loadingLabel} />}</div>
         </main>
     );
 };

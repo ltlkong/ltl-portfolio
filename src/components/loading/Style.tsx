@@ -7,12 +7,6 @@ const styles = (theme: ThemePrimary) => ({
         },
     },
     Loading: {
-        position: 'absolute',
-        left: 0,
-        top: 0,
-        width: '100vw',
-        height: '100vh',
-        backgroundColor: theme.colorPrimary,
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
@@ -20,11 +14,6 @@ const styles = (theme: ThemePrimary) => ({
     Label: {
         fontSize: '3rem',
         color: theme.textColorPrimary,
-
-        '& span': {
-            display: 'inline-block',
-            animation: '$flip 2s infinite',
-        },
     },
 
     SleepPerson: {

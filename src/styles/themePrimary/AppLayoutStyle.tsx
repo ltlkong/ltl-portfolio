@@ -4,10 +4,7 @@ const styles = (theme: ThemePrimary) => ({
     Button: {
         backgroundColor: theme.colorPrimary,
     },
-    Container: {
-        display: 'flex',
-        justifyContent: 'center',
-    },
+    Container: {},
     Nav: {
         right: '10%',
         top: '10%',

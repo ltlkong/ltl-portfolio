@@ -35,11 +35,9 @@ const AppLayout = ({
         }, 3000);
     }, []);
 
-    if (isLoading) return <Loading label={loadingLabel} />;
-
     return (
-        <>
-            <TransitionGroup component={null}>
+        <div className={classes.Container}>
+            <TransitionGroup component="main">
                 <CSSTransition
                     classNames={'fade'}
                     key={location.key}
@@ -52,6 +50,7 @@ const AppLayout = ({
                     </Routes>
                 </CSSTransition>
             </TransitionGroup>
+
             <NavBar className={classes.Nav}>
                 {links.map((props, key) => (
                     <Link key={key} to={props.to}>
@@ -59,7 +58,7 @@ const AppLayout = ({
                     </Link>
                 ))}
             </NavBar>
-        </>
+        </div>
     );
 };
 

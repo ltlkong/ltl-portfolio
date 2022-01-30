@@ -5,13 +5,15 @@ import styles from './Style';
 type Classes = WithStylesProps<typeof styles>;
 
 interface IProps extends Classes, HTMLProps<HTMLDivElement> {
-    children: string;
+    children: string | string[];
 }
 
 const FlipChars = ({ children, classes, className }: IProps): ReactElement => {
+    const text = children instanceof Array ? children : children.split('');
+
     return (
         <div className={[className].join(' ')}>
-            {children.split('').map((value, i) => (
+            {text.map((value, i) => (
                 <span
                     className={classes.FlipItem}
                     key={i}

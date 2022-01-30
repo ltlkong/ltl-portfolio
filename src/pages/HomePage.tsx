@@ -5,8 +5,8 @@ import { toggleLoading } from '../actions/loadingActions';
 import { IRootState } from '../store';
 import { connect } from 'react-redux';
 import Markdown from '../components/markdown';
+import FlipChars from '../components/flipChars';
 import Loading from '../components/loading';
-import meW from '../assets/imgs/meW.png';
 
 type DispatchToProps = typeof mapDispatchToProps;
 type StateToProps = ReturnType<typeof mapStateToProps>;
@@ -37,7 +37,9 @@ const HomePage = ({
         <main className={classes.Home}>
             <section className={classes.IntroductionSection}>
                 <div className={classes.Introduction}>
-                    <h1>L</h1>
+                    <h1>
+                        <FlipChars>L</FlipChars>
+                    </h1>
                     <div>
                         <Markdown>{homePageData.introShort}</Markdown>
                         <p className={classes.EmploymentStatus}>

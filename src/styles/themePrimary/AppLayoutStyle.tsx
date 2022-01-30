@@ -21,6 +21,14 @@ const styles = (theme: ThemePrimary) => ({
             },
         },
     },
+    Bookmark: {
+        position: 'absolute',
+        top: '-3vh',
+        left: '8vw',
+        backgroundColor: theme.colorNight,
+        width: '50px',
+        height: '15vh',
+    },
 });
 
 export default styles;

@@ -52,6 +52,8 @@ const AppLayout = ({
                     </Link>
                 ))}
             </NavBar>
+
+            <div className={classes.Bookmark}></div>
         </div>
     );
 };

@@ -35,7 +35,7 @@ const HomePage = ({
 
     return (
         <main className={classes.Home}>
-            <section className={classes.IntroductionSection}>
+            <section className={classes.Section}>
                 <div className={classes.Introduction}>
                     <h1>
                         <FlipChars>L</FlipChars>
@@ -58,6 +58,7 @@ const HomePage = ({
                     </div>
                 </div>
             </section>
+            <section className={classes.Section}></section>
         </main>
     );
 };

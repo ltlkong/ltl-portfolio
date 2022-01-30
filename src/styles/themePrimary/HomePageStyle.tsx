@@ -28,7 +28,7 @@ const styles = (theme: ThemePrimary) => ({
             margin: 0,
         },
     },
-    IntroductionSection: {
+    Section: {
         width: '100vw',
         height: '100vh',
     },

@@ -28,9 +28,13 @@ const styles = (theme: ThemePrimary) => ({
             margin: 0,
         },
     },
+    IntroductionSection: {
+        width: '100vw',
+        height: '100vh',
+    },
     Introduction: {
         fontSize: '1.5em',
-        padding: '80px 16px 0 16px',
+        padding: '18vh 16px 0 16px',
         color: theme.textColorPrimary,
         fontFamily: theme.fontFamily,
         '& *::selection': {

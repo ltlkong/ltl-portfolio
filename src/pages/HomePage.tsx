@@ -35,7 +35,7 @@ const HomePage = ({
 
     return (
         <main className={classes.Home}>
-            <section>
+            <section className={classes.IntroductionSection}>
                 <div className={classes.Introduction}>
                     <h1>L</h1>
                     <div>

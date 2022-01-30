@@ -29,12 +29,6 @@ const AppLayout = ({
 }: IAppLayoutProps): ReactElement => {
     const location = useLocation();
 
-    useEffect(() => {
-        setTimeout(() => {
-            stopLoading();
-        }, 3000);
-    }, []);
-
     return (
         <div className={classes.Main}>
             <TransitionGroup component={null}>

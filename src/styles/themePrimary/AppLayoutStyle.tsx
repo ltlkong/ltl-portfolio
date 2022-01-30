@@ -15,6 +15,10 @@ const styles = (theme: ThemePrimary) => ({
         '& a': {
             padding: '0.1em',
             fontSize: '1.2em',
+            color: theme.textColorPrimary,
+            '&:hover': {
+                color: theme.colorSecondary,
+            },
         },
     },
 });

@@ -9,7 +9,7 @@ const themePrimary = {
         backgroundRepeat: 'no-repeat',
         backgroundSize: '100% 0.2em',
         backgroundPosition: '0 88%',
-        transition: 'background-size 0.25s ease-in',
+        transition: 'background-size 0.12s ease-in',
         '&:hover': {
             backgroundSize: '100% 88%',
         },

@@ -12,7 +12,7 @@ const styles = (theme: ThemePrimary) => ({
         '&:after': {
             content: '""',
             backgroundImage: `url("${meW}")`,
-            backgroundSize: '300px',
+            backgroundSize: '60vh',
             backgroundPosition: 'right bottom',
             backgroundRepeat: 'no-repeat',
             opacity: 0.6,
@@ -33,8 +33,9 @@ const styles = (theme: ThemePrimary) => ({
         height: '100vh',
     },
     Introduction: {
-        fontSize: '1.5em',
-        padding: '18vh 16px 0 16px',
+        lineHeight: '1.5',
+        fontSize: '1.6em',
+        padding: '16vh 16px 0 16px',
         color: theme.textColorPrimary,
         fontFamily: theme.fontFamily,
         '& *::selection': {

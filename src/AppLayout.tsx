@@ -9,7 +9,7 @@ import { IRootState } from './store';
 import { connect } from 'react-redux';
 import styles from './styles/themePrimary/AppLayoutStyle';
 import { Routes, Route, Link, useLocation } from 'react-router-dom';
-import routes from './routes';
+import routes, { getRouteName } from './routes';
 import links from './routes/links';
 import { TransitionGroup, CSSTransition } from 'react-transition-group';
 import NavBar from './components/navBar';
@@ -28,6 +28,7 @@ const AppLayout = ({
     classes,
 }: IAppLayoutProps): ReactElement => {
     const location = useLocation();
+    const firstCharOfRoute = getRouteName(location.pathname).charAt(0);
 
     return (
         <div className={classes.Main}>
@@ -53,7 +54,9 @@ const AppLayout = ({
                 ))}
             </NavBar>
 
-            <div className={classes.Bookmark}></div>
+            <div className={classes.Bookmark}>
+                <h1>{firstCharOfRoute}</h1>
+            </div>
         </div>
     );
 };

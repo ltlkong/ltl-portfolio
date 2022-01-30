@@ -28,6 +28,14 @@ const styles = (theme: ThemePrimary) => ({
         backgroundColor: theme.colorNight,
         width: '50px',
         height: '15vh',
+        color: theme.colorPrimary,
+        '& h1': {
+            position: 'absolute',
+            bottom: 0,
+            textAlign: 'center',
+            width: '100%',
+            marginBottom: '2vh',
+        },
     },
 });
 

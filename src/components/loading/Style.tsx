@@ -6,11 +6,13 @@ const styles = (theme: ThemePrimary) => ({
             transform: 'rotateY(360deg) ',
         },
     },
+
     Loading: {
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
     },
+
     Label: {
         fontSize: '3rem',
         color: theme.textColorPrimary,
@@ -20,7 +22,6 @@ const styles = (theme: ThemePrimary) => ({
         left: 0,
         bottom: 0,
         fontSize: '25px',
-
         '& div': {
             backgroundColor: theme.textColorPrimary,
             borderColor: theme.textColorPrimary,

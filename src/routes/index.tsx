@@ -3,6 +3,7 @@ import HomePage from '../pages/HomePage';
 import NotFoundPage from '../pages/NotFoundPage';
 
 const routes = [
+    { path: '/contact', name: 'contact', element: null },
     { path: '/blog/:id', name: 'blog', element: null },
     { path: '/blog', name: 'blog', element: <BlogPage /> },
     { path: '/', name: 'home', element: <HomePage /> },

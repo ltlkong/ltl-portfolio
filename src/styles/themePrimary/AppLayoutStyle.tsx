@@ -4,17 +4,17 @@ const styles = (theme: ThemePrimary) => ({
     Button: {
         backgroundColor: theme.colorPrimary,
     },
-    Container: {},
+    Main: {},
     Nav: {
         right: '10%',
         top: '10%',
         display: 'flex',
         flexDirection: 'column',
-        backgroundColor: theme.colorPrimary,
+        fontWeight: 'bolder',
 
         '& a': {
-            padding: '0.5em',
-            fontSize: '1.5em',
+            padding: '0.1em',
+            fontSize: '1.2em',
         },
     },
 });

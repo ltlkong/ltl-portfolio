@@ -36,8 +36,8 @@ const AppLayout = ({
     }, []);
 
     return (
-        <div className={classes.Container}>
-            <TransitionGroup component="main">
+        <div className={classes.Main}>
+            <TransitionGroup component={null}>
                 <CSSTransition
                     classNames={'fade'}
                     key={location.key}

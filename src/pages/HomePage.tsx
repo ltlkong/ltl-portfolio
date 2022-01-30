@@ -6,12 +6,24 @@ import { IRootState } from '../store';
 import { connect } from 'react-redux';
 import Markdown from '../components/markdown';
 import Loading from '../components/loading';
+import meW from '../assets/imgs/meW.png';
 
 type DispatchToProps = typeof mapDispatchToProps;
 type StateToProps = ReturnType<typeof mapStateToProps>;
 type Classes = WithStylesProps<typeof styles>;
 
 interface IProps extends Classes, DispatchToProps, StateToProps {}
+
+const homePageData = {
+    introShort: `Hey, I'm **Tielin Li**. I'm a **programmer** working on Full-Stack development.`,
+    employeeStatus: {
+        title: 'Application developer',
+        company: {
+            name: 'Pollard Banknote Ltd.',
+            link: 'https://www.pollardbanknote.com',
+        },
+    },
+};
 
 const HomePage = ({
     classes,
@@ -23,24 +35,27 @@ const HomePage = ({
 
     return (
         <main className={classes.Home}>
-            <h1>Home Page</h1>
-            <input
-                placeholder={'Enter loading label'}
-                value={inputValue}
-                onChange={({ target }) => setInputValue(target.value)}
-            />
-            <button
-                onClick={() => {
-                    toggleLoading({ label: inputValue });
-                }}
-            >
-                Toggle Loading
-            </button>
-            <Markdown>
-                Hey, I'm **Tielin Li**. I'm a **developer** working on Pollard
-                Banknote.
-            </Markdown>
-            <div>{isLoading && <Loading label={loadingLabel} />}</div>
+            <section>
+                <div className={classes.Introduction}>
+                    <h1>L</h1>
+                    <div>
+                        <Markdown>{homePageData.introShort}</Markdown>
+                        <p className={classes.EmploymentStatus}>
+                            Currently an {homePageData.employeeStatus.title} at{' '}
+                            <strong>
+                                <a
+                                    href={
+                                        homePageData.employeeStatus.company.link
+                                    }
+                                    target="_blank"
+                                >
+                                    {homePageData.employeeStatus.company.name}
+                                </a>
+                            </strong>
+                        </p>
+                    </div>
+                </div>
+            </section>
         </main>
     );
 };

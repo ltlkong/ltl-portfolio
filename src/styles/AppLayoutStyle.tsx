@@ -9,7 +9,7 @@ const styles = (theme: ThemePrimary) => ({
         '& a': {
             display: 'list-item',
             padding: '.1em',
-            fontSize: '.8em',
+            fontSize: '.9em',
             color: theme.textColorPrimary,
             '&:hover': {
                 color: theme.colorSecondary,

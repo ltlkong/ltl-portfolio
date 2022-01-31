@@ -27,7 +27,7 @@ const styles = (theme: ThemePrimary) => ({
         '&:after': {
             content: '""',
             backgroundImage: `url("${meW}")`,
-            backgroundSize: '60vh',
+            backgroundSize: '20em',
             backgroundPosition: 'right bottom',
             backgroundRepeat: 'no-repeat',
             opacity: 0.7,
@@ -48,6 +48,7 @@ const styles = (theme: ThemePrimary) => ({
         fontFamily: theme.fontFamily,
     },
     EmploymentStatus: {
+        composes: 'fst-italic',
         fontSize: '.5em',
         color: 'rgb(33,53,90)',
 

@@ -28,6 +28,7 @@ const styles = (theme: ThemePrimary) => ({
         backgroundColor: theme.colorNight,
         width: '50px',
         height: '15vh',
+
         '& h1': {
             fontSize: '35px',
             position: 'absolute',
@@ -38,6 +39,16 @@ const styles = (theme: ThemePrimary) => ({
             color: 'transparent',
             backgroundClip: 'text',
             backgroundColor: theme.backgroundColorHome,
+        },
+    },
+    Footer: {
+        composes: 'd-flex flex-wrap justify-content-center align-items-center',
+        backgroundColor: theme.backgroundColorHome,
+        fontSize: '.7em',
+
+        '& div': {
+            textAlign: 'center',
+            width: '40%',
         },
     },
 });

@@ -67,10 +67,9 @@ const AppLayout = ({
                 <h1>{firstCharOfRoute}</h1>
             </div>
 
-            <Footer>
-                <div style={{ textAlign: 'center', paddingTop: '3vh' }}>
-                    Last Updated At 2022
-                </div>
+            <Footer className={classes.Footer}>
+                <div>Tielin Li</div>
+                <div>Last Updated At 2022</div>
             </Footer>
         </>
     );

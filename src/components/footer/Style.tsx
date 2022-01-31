@@ -1,7 +1,7 @@
 const styles = {
     Footer: {
         height: '10vh',
-        backgroundColor: 'transparent',
+        borderTop: '3px solid #bbb',
     },
 };
 

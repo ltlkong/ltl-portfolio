@@ -1,11 +1,12 @@
 import React, { ReactElement, useState } from 'react';
-import styles from '../styles/themePrimary/HomePageStyle';
+import styles from '../styles/HomePageStyle';
 import withStyles, { WithStylesProps } from 'react-jss';
 import { toggleLoading } from '../actions/loadingActions';
 import { IRootState } from '../store';
 import { connect } from 'react-redux';
 import Markdown from '../components/markdown';
 import FlipChars from '../components/flipChars';
+import combineClasses from '../utils/combineClasses';
 import Loading from '../components/loading';
 
 type DispatchToProps = typeof mapDispatchToProps;
@@ -35,7 +36,9 @@ const HomePage = ({
 
     return (
         <main className={classes.Home}>
-            <section className={classes.Section}>
+            <section
+                className={combineClasses(classes.Section, classes.Banner)}
+            >
                 <div className={classes.Introduction}>
                     <h1>
                         <FlipChars>L</FlipChars>

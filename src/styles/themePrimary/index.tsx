@@ -3,6 +3,7 @@ const themePrimary = {
     colorSecondary: 'rgb(74, 109, 136)',
     colorNight: 'rgb(1, 12, 30)',
     colorDark: 'rgb(0, 30, 56)',
+    backgroundColorHome: 'rgb(213,217,224)',
     textColorPrimary: 'rgb(0, 30, 56)',
     textMagic: {
         backgroundImage: 'linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%)',

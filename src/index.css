@@ -1,9 +1,38 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai+Looped:wght@200;300;400;500;600;700&display=swap');
 
+/*Bootstrap breakpoints*/
+@media only screen and (min-width: 576px) {
+    html {
+        font-size: 16px;
+    }
+}
+@media only screen and (min-width: 768px) {
+    html {
+        font-size: 18px;
+    }
+}
+@media only screen and (min-width: 992px) {
+    html {
+        font-size: 20px;
+    }
+}
+@media only screen and (min-width: 1200px) {
+    html {
+        font-size: 23px;
+    }
+}
+@media only screen and (min-width: 1400px) {
+    html {
+        font-size: 27px;
+    }
+}
+
+/*Normalize*/
 a {
     text-decoration: none;
 }
 
+/*CSS Transitions*/
 .fade-enter {
     opacity: 0;
     transform: translate(0, -40px);

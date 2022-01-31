@@ -7,7 +7,7 @@ import {
 } from './actions/loadingActions';
 import { IRootState } from './store';
 import { connect } from 'react-redux';
-import styles from './styles/themePrimary/AppLayoutStyle';
+import styles from './styles/AppLayoutStyle';
 import { Routes, Route, Link, useLocation } from 'react-router-dom';
 import routes, { getRouteName } from './routes';
 import links from './routes/links';
@@ -31,7 +31,7 @@ const AppLayout = ({
     const firstCharOfRoute = getRouteName(location.pathname).charAt(0);
 
     return (
-        <div className={classes.Main}>
+        <>
             <TransitionGroup component={null}>
                 <CSSTransition
                     classNames={'fade'}
@@ -57,7 +57,7 @@ const AppLayout = ({
             <div className={classes.Bookmark}>
                 <h1>{firstCharOfRoute}</h1>
             </div>
-        </div>
+        </>
     );
 };
 

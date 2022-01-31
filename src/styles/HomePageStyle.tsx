@@ -1,21 +1,21 @@
-import { ThemePrimary } from './';
-import meW from '../../assets/imgs/meW.png';
+import { ThemePrimary } from './themePrimary';
+import meW from '../assets/imgs/meW.png';
 
 const styles = (theme: ThemePrimary) => ({
     Home: {
-        position: 'relative',
-        backgroundColor: theme.colorPrimary,
+        composes: 'position-relative',
+        backgroundColor: theme.backgroundColorHome,
         color: theme.textColorPrimary,
         zIndex: 0,
-
         height: '100vh',
+
         '&:after': {
             content: '""',
             backgroundImage: `url("${meW}")`,
             backgroundSize: '60vh',
             backgroundPosition: 'right bottom',
             backgroundRepeat: 'no-repeat',
-            opacity: 0.6,
+            opacity: 0.7,
             position: 'absolute',
             top: 0,
             left: 0,
@@ -32,10 +32,14 @@ const styles = (theme: ThemePrimary) => ({
         width: '100vw',
         height: '100vh',
     },
+    Banner: {
+        composes: 'd-flex align-items-center',
+    },
     Introduction: {
+        composes: 'col-md-6 ms-md-5 mb-sm-4',
         lineHeight: '1.5',
         fontSize: '1.6em',
-        padding: '16vh 16px 0 16px',
+        padding: '0 16px 0 16px',
         color: theme.textColorPrimary,
         fontFamily: theme.fontFamily,
         '& *::selection': {
@@ -44,15 +48,16 @@ const styles = (theme: ThemePrimary) => ({
         },
     },
     EmploymentStatus: {
+        fontSize: '.5em',
+        color: 'rgb(33,53,90)',
+
         '& a': {
             ...theme.textMagic,
             color: 'inherit',
             backgroundImage:
                 'linear-gradient(90deg, rgba(33,53,90,0.9) 100%, rgba(0,212,255,1) 100%)',
-            padding: '.1em',
+            padding: '.2em',
         },
-        fontSize: '0.7em',
-        color: 'rgb(33,53,90)',
         '& a:hover': {
             color: 'ghostwhite',
         },

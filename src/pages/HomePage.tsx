@@ -32,8 +32,6 @@ const HomePage = ({
     isLoading,
     loadingLabel,
 }: IProps): ReactElement => {
-    const [inputValue, setInputValue] = useState('');
-
     return (
         <main className={classes.Home}>
             <section

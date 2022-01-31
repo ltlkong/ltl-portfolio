@@ -47,11 +47,19 @@ const AppLayout = ({
             </TransitionGroup>
 
             <NavBar className={classes.Nav}>
-                {links.map((props, key) => (
-                    <Link key={key} to={props.to}>
-                        {props.name}
-                    </Link>
-                ))}
+                {links.map((props, key) => {
+                    const isCurrentRoute = props.to === location.pathname;
+
+                    return (
+                        <Link
+                            key={key}
+                            to={props.to}
+                            className={isCurrentRoute ? 'active' : ''}
+                        >
+                            {props.name}
+                        </Link>
+                    );
+                })}
             </NavBar>
 
             <div className={classes.Bookmark}>

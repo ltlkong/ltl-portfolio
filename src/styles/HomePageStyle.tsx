@@ -3,11 +3,26 @@ import meW from '../assets/imgs/meW.png';
 
 const styles = (theme: ThemePrimary) => ({
     Home: {
-        composes: 'position-relative',
         backgroundColor: theme.backgroundColorHome,
         color: theme.textColorPrimary,
-        zIndex: 0,
+
+        '& h1': {
+            margin: 0,
+        },
+
+        '& *::selection': {
+            color: theme.colorPrimary,
+            backgroundColor: theme.textColorPrimary,
+        },
+    },
+    Section: {
+        width: '100vw',
         height: '100vh',
+    },
+    Banner: {
+        composes: 'd-flex align-items-center position-relative',
+        height: '100vh',
+        zIndex: 0,
 
         '&:after': {
             content: '""',
@@ -23,17 +38,6 @@ const styles = (theme: ThemePrimary) => ({
             right: 0,
             zIndex: -1,
         },
-
-        '& h1': {
-            margin: 0,
-        },
-    },
-    Section: {
-        width: '100vw',
-        height: '100vh',
-    },
-    Banner: {
-        composes: 'd-flex align-items-center',
     },
     Introduction: {
         composes: 'col-md-6 ms-md-5 mb-sm-4',
@@ -42,10 +46,6 @@ const styles = (theme: ThemePrimary) => ({
         padding: '0 16px 0 16px',
         color: theme.textColorPrimary,
         fontFamily: theme.fontFamily,
-        '& *::selection': {
-            color: theme.colorPrimary,
-            backgroundColor: theme.textColorPrimary,
-        },
     },
     EmploymentStatus: {
         fontSize: '.5em',

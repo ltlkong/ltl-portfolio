@@ -1,21 +1,24 @@
 import { ThemePrimary } from './themePrimary';
 
 const styles = (theme: ThemePrimary) => ({
-    Button: {
-        backgroundColor: theme.colorPrimary,
-    },
     Nav: {
         composes: 'd-flex flex-column fw-bolder',
         right: '10%',
         top: '10%',
 
         '& a': {
-            padding: '0.1em',
-            fontSize: '1.2em',
+            display: 'list-item',
+            padding: '.1em',
+            fontSize: '.8em',
             color: theme.textColorPrimary,
             '&:hover': {
                 color: theme.colorSecondary,
             },
+        },
+
+        '& .active': {
+            color: theme.colorSecondary,
+            listStyle: 'square',
         },
     },
     Bookmark: {
@@ -26,6 +29,7 @@ const styles = (theme: ThemePrimary) => ({
         width: '50px',
         height: '15vh',
         '& h1': {
+            fontSize: '35px',
             position: 'absolute',
             bottom: 0,
             textAlign: 'center',

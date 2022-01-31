@@ -54,6 +54,7 @@ const styles = (theme: ThemePrimary) => ({
 
         '& a': {
             ...theme.textMagic,
+            fontStyle: 'normal',
             color: 'inherit',
             backgroundImage:
                 'linear-gradient(90deg, rgba(33,53,90,0.9) 100%, rgba(0,212,255,1) 100%)',

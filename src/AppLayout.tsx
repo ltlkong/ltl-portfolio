@@ -14,6 +14,7 @@ import links from './routes/links';
 import { TransitionGroup, CSSTransition } from 'react-transition-group';
 import NavBar from './components/navBar';
 import Loading from './components/loading';
+import Footer from './components/footer';
 
 type StateToProps = ReturnType<typeof mapStateToProps>;
 type DispatchToProps = typeof mapDispatchToProps;
@@ -65,6 +66,12 @@ const AppLayout = ({
             <div className={classes.Bookmark}>
                 <h1>{firstCharOfRoute}</h1>
             </div>
+
+            <Footer>
+                <div style={{ textAlign: 'center', paddingTop: '3vh' }}>
+                    Last Updated At 2022
+                </div>
+            </Footer>
         </>
     );
 };

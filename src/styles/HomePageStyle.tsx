@@ -6,10 +6,6 @@ const styles = (theme: ThemePrimary) => ({
         backgroundColor: theme.backgroundColorHome,
         color: theme.textColorPrimary,
 
-        '& h1': {
-            margin: 0,
-        },
-
         '& *::selection': {
             color: theme.colorPrimary,
             backgroundColor: theme.textColorPrimary,
@@ -40,7 +36,7 @@ const styles = (theme: ThemePrimary) => ({
         },
     },
     Introduction: {
-        composes: 'col-md-6 ms-md-5 mb-sm-4',
+        composes: 'col-md-6 ms-md-5 mb-5 mb-sm-4',
         lineHeight: '1.5',
         fontSize: '1.6em',
         padding: '0 16px 0 16px',

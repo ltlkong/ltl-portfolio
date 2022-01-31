@@ -6,8 +6,8 @@ type Classes = WithStylesProps<typeof styles>;
 
 interface IProps extends Classes, HTMLProps<HTMLDivElement> {}
 
-const footer = (): ReactElement => {
-    return <footer></footer>;
+const footer = ({ children, classes }: IProps): ReactElement => {
+    return <footer className={classes.Footer}>{children}</footer>;
 };
 
 export default withStyles(styles)(footer);

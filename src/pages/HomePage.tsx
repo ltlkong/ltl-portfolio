@@ -8,6 +8,7 @@ import Markdown from '../components/markdown';
 import FlipChars from '../components/flipChars';
 import combineClasses from '../utils/combineClasses';
 import Loading from '../components/loading';
+import myPic from '../assets/imgs/mypic.jpeg';
 
 type DispatchToProps = typeof mapDispatchToProps;
 type StateToProps = ReturnType<typeof mapStateToProps>;
@@ -24,6 +25,7 @@ const homePageData = {
             link: 'https://www.pollardbanknote.com',
         },
     },
+    aboutMe: `Currently, I'm an Application developer working on the lottery app and web development at Pollard Banknote Ltd. Previously, I did internship at Rally the Locals as a web developer.`,
 };
 
 const HomePage = ({
@@ -59,7 +61,20 @@ const HomePage = ({
                     </div>
                 </div>
             </section>
-            <section className={classes.Section}></section>
+            <section
+                className={combineClasses(
+                    classes.Section,
+                    classes.AboutSection
+                )}
+            >
+                <div className={classes.AboutMeImgContainer}>
+                    <img src={myPic} />
+                </div>
+                <div className={classes.AboutMeIntro}>
+                    <h3>A BIT ABOUT ME</h3>
+                    <Markdown>{homePageData.aboutMe}</Markdown>
+                </div>
+            </section>
         </main>
     );
 };

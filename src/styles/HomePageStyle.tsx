@@ -27,7 +27,7 @@ const styles = (theme: ThemePrimary) => ({
         '&:after': {
             content: '""',
             backgroundImage: `url("${meW}")`,
-            backgroundSize: '20em',
+            backgroundSize: '23em',
             backgroundPosition: 'right bottom',
             backgroundRepeat: 'no-repeat',
             opacity: 0.7,
@@ -62,6 +62,18 @@ const styles = (theme: ThemePrimary) => ({
         '& a:hover': {
             color: 'ghostwhite',
         },
+    },
+    AboutSection: {
+        composes: 'd-flex flex-wrap justify-content-evenly p-4',
+    },
+    AboutMeImgContainer: {
+        composes: 'col-8 col-md-4 m-auto m-md-0 d-block',
+        '& img': {
+            width: '100%',
+        },
+    },
+    AboutMeIntro: {
+        composes: 'col-md-6',
     },
 });
 

@@ -75,18 +75,6 @@ const styles = (theme: ThemePrimary) => ({
     AboutMeIntro: {
         composes: 'col-md-6',
     },
-    Footer: {
-        composes: 'd-flex flex-wrap justify-content-center align-items-center',
-        backgroundColor: theme.backgroundColorHome,
-        fontSize: '.7em',
-        height: '10vh',
-        borderTop: '3px solid #bbb',
-
-        '& div': {
-            textAlign: 'center',
-            width: '40%',
-        },
-    },
 });
 
 export default styles;

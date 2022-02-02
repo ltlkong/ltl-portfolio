@@ -1,16 +1,17 @@
 import React, { ReactElement, useState } from 'react';
-import styles from '../styles/HomePageStyle';
+import styles from '../../styles/HomePageStyle';
 import withStyles, { WithStylesProps } from 'react-jss';
-import { toggleLoading } from '../actions/loadingActions';
-import { IRootState } from '../store';
+import { toggleLoading } from '../../actions/loadingActions';
+import { IRootState } from '../../store';
 import { connect } from 'react-redux';
-import Markdown from '../components/markdown';
-import FlipChars from '../components/flipChars';
-import combineClasses from '../utils/combineClasses';
-import Loading from '../components/loading';
-import myPic from '../assets/imgs/mypic.jpeg';
-import PageLayout, { Main, Footer } from '../components/pageLayout';
-import Bookmark from '../components/bookmark';
+import Markdown from '../../components/markdown';
+import FlipChars from '../../components/flipChars';
+import combineClasses from '../../utils/combineClasses';
+import Loading from '../../components/loading';
+import myPic from '../../assets/imgs/mypic.jpeg';
+import PageLayout, { Main } from '../../components/pageLayout';
+import Bookmark from '../../components/bookmark';
+import CustomFooter from '../components/customFooter';
 
 type DispatchToProps = typeof mapDispatchToProps;
 type StateToProps = ReturnType<typeof mapStateToProps>;
@@ -85,10 +86,7 @@ const HomePage = ({
                     </div>
                 </section>
             </Main>
-            <Footer className={classes.Footer}>
-                <div>Tielin Li</div>
-                <div>Last Updated At 2022</div>
-            </Footer>
+            <CustomFooter />
         </PageLayout>
     );
 };

@@ -1,5 +1,5 @@
 import BlogPage from '../pages/BlogPage';
-import HomePage from '../pages/HomePage';
+import HomePage from '../pages/homePage';
 import NotFoundPage from '../pages/NotFoundPage';
 
 const routes = [

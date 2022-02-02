@@ -21,36 +21,6 @@ const styles = (theme: ThemePrimary) => ({
             listStyle: 'square',
         },
     },
-    Bookmark: {
-        composes: 'position-absolute',
-        top: '-3vh',
-        left: '8vw',
-        backgroundColor: theme.colorNight,
-        width: '50px',
-        height: '15vh',
-
-        '& h1': {
-            fontSize: '35px',
-            position: 'absolute',
-            bottom: 0,
-            textAlign: 'center',
-            width: '100%',
-            marginBottom: '2vh',
-            color: 'transparent',
-            backgroundClip: 'text',
-            backgroundColor: theme.backgroundColorHome,
-        },
-    },
-    Footer: {
-        composes: 'd-flex flex-wrap justify-content-center align-items-center',
-        backgroundColor: theme.backgroundColorHome,
-        fontSize: '.7em',
-
-        '& div': {
-            textAlign: 'center',
-            width: '40%',
-        },
-    },
 });
 
 export default styles;

@@ -9,6 +9,8 @@ import FlipChars from '../components/flipChars';
 import combineClasses from '../utils/combineClasses';
 import Loading from '../components/loading';
 import myPic from '../assets/imgs/mypic.jpeg';
+import PageLayout, { Main, Footer } from '../components/pageLayout';
+import Bookmark from '../components/bookmark';
 
 type DispatchToProps = typeof mapDispatchToProps;
 type StateToProps = ReturnType<typeof mapStateToProps>;
@@ -35,47 +37,59 @@ const HomePage = ({
     loadingLabel,
 }: IProps): ReactElement => {
     return (
-        <main className={classes.Home}>
-            <section
-                className={combineClasses(classes.Section, classes.Banner)}
-            >
-                <div className={classes.Introduction}>
-                    <h1>
-                        <FlipChars>L</FlipChars>
-                    </h1>
-                    <div>
-                        <Markdown>{homePageData.introShort}</Markdown>
-                        <p className={classes.EmploymentStatus}>
-                            Currently an {homePageData.employeeStatus.title} at{' '}
-                            <strong>
-                                <a
-                                    href={
-                                        homePageData.employeeStatus.company.link
-                                    }
-                                    target="_blank"
-                                >
-                                    {homePageData.employeeStatus.company.name}
-                                </a>
-                            </strong>
-                        </p>
+        <PageLayout>
+            <Bookmark className={classes.Bookmark} />
+            <Main className={classes.Home}>
+                <section
+                    className={combineClasses(classes.Section, classes.Banner)}
+                >
+                    <div className={classes.Introduction}>
+                        <h1>
+                            <FlipChars>L</FlipChars>
+                        </h1>
+                        <div>
+                            <Markdown>{homePageData.introShort}</Markdown>
+                            <p className={classes.EmploymentStatus}>
+                                Currently an {homePageData.employeeStatus.title}{' '}
+                                at{' '}
+                                <strong>
+                                    <a
+                                        href={
+                                            homePageData.employeeStatus.company
+                                                .link
+                                        }
+                                        target="_blank"
+                                    >
+                                        {
+                                            homePageData.employeeStatus.company
+                                                .name
+                                        }
+                                    </a>
+                                </strong>
+                            </p>
+                        </div>
                     </div>
-                </div>
-            </section>
-            <section
-                className={combineClasses(
-                    classes.Section,
-                    classes.AboutSection
-                )}
-            >
-                <div className={classes.AboutMeImgContainer}>
-                    <img src={myPic} />
-                </div>
-                <div className={classes.AboutMeIntro}>
-                    <h3>A BIT ABOUT ME</h3>
-                    <Markdown>{homePageData.aboutMe}</Markdown>
-                </div>
-            </section>
-        </main>
+                </section>
+                <section
+                    className={combineClasses(
+                        classes.Section,
+                        classes.AboutSection
+                    )}
+                >
+                    <div className={classes.AboutMeImgContainer}>
+                        <img src={myPic} />
+                    </div>
+                    <div className={classes.AboutMeIntro}>
+                        <h3>A BIT ABOUT ME</h3>
+                        <Markdown>{homePageData.aboutMe}</Markdown>
+                    </div>
+                </section>
+            </Main>
+            <Footer className={classes.Footer}>
+                <div>Tielin Li</div>
+                <div>Last Updated At 2022</div>
+            </Footer>
+        </PageLayout>
     );
 };
 

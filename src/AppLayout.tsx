@@ -14,7 +14,6 @@ import links from './routes/links';
 import { TransitionGroup, CSSTransition } from 'react-transition-group';
 import NavBar from './components/navBar';
 import Loading from './components/loading';
-import Footer from './components/footer';
 
 type StateToProps = ReturnType<typeof mapStateToProps>;
 type DispatchToProps = typeof mapDispatchToProps;
@@ -29,7 +28,6 @@ const AppLayout = ({
     classes,
 }: IAppLayoutProps): ReactElement => {
     const location = useLocation();
-    const firstCharOfRoute = getRouteName(location.pathname).charAt(0);
 
     return (
         <>
@@ -62,15 +60,6 @@ const AppLayout = ({
                     );
                 })}
             </NavBar>
-
-            <div className={classes.Bookmark}>
-                <h1>{firstCharOfRoute}</h1>
-            </div>
-
-            <Footer className={classes.Footer}>
-                <div>Tielin Li</div>
-                <div>Last Updated At 2022</div>
-            </Footer>
         </>
     );
 };

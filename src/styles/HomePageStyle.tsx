@@ -15,6 +15,9 @@ const styles = (theme: ThemePrimary) => ({
         width: '100vw',
         height: '100vh',
     },
+    Bookmark: {
+        backgroundColor: theme.backgroundColorHome,
+    },
     Banner: {
         composes: 'd-flex align-items-center position-relative',
         height: '100vh',
@@ -71,6 +74,18 @@ const styles = (theme: ThemePrimary) => ({
     },
     AboutMeIntro: {
         composes: 'col-md-6',
+    },
+    Footer: {
+        composes: 'd-flex flex-wrap justify-content-center align-items-center',
+        backgroundColor: theme.backgroundColorHome,
+        fontSize: '.7em',
+        height: '10vh',
+        borderTop: '3px solid #bbb',
+
+        '& div': {
+            textAlign: 'center',
+            width: '40%',
+        },
     },
 });
 

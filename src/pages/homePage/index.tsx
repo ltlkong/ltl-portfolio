@@ -29,6 +29,7 @@ const homePageData = {
         },
     },
     aboutMe: `Currently, I'm an Application developer working on the lottery app and web development at Pollard Banknote Ltd. Previously, I did internship at Rally the Locals as a web developer.`,
+    myPicture: 'https://i.redd.it/1pmsjnk8f1g01.jpg',
 };
 
 const HomePage = ({
@@ -78,7 +79,7 @@ const HomePage = ({
                     )}
                 >
                     <div className={classes.AboutMeImgContainer}>
-                        <img src={myPic} />
+                        <img src={homePageData.myPicture} />
                     </div>
                     <div className={classes.AboutMeIntro}>
                         <h3>A BIT ABOUT ME</h3>

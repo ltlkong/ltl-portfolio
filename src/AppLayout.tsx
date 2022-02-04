@@ -9,7 +9,7 @@ import { IRootState } from './store';
 import { connect } from 'react-redux';
 import styles from './styles/AppLayoutStyle';
 import { Routes, Route, Link, useLocation } from 'react-router-dom';
-import routes, { getRouteName } from './routes';
+import routes from './routes';
 import links from './routes/links';
 import { TransitionGroup, CSSTransition } from 'react-transition-group';
 import NavBar from './components/navBar';

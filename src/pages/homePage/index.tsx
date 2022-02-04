@@ -12,6 +12,7 @@ import myPic from '../../assets/imgs/mypic.jpeg';
 import PageLayout, { Main } from '../../components/pageLayout';
 import Bookmark from '../../components/bookmark';
 import CustomFooter from '../components/customFooter';
+import CareerTimeline from './components/career-timeline';
 
 type DispatchToProps = typeof mapDispatchToProps;
 type StateToProps = ReturnType<typeof mapStateToProps>;
@@ -85,6 +86,9 @@ const HomePage = ({
                         <h3>A BIT ABOUT ME</h3>
                         <Markdown>{homePageData.aboutMe}</Markdown>
                     </div>
+                </section>
+                <section className={combineClasses(classes.Section)}>
+                    <CareerTimeline />
                 </section>
             </Main>
             <CustomFooter />

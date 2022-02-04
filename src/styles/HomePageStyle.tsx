@@ -13,7 +13,7 @@ const styles = (theme: ThemePrimary) => ({
     },
     Section: {
         width: '100vw',
-        height: '100vh',
+        minHeight: '100vh',
     },
     Bookmark: {
         backgroundColor: theme.backgroundColorHome,

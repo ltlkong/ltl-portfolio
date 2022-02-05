@@ -13,6 +13,7 @@ import PageLayout, { Main } from '../../components/pageLayout';
 import Bookmark from '../../components/bookmark';
 import CustomFooter from '../components/customFooter';
 import CareerTimeline from './components/career-timeline';
+import FadeInContainer from 'react-fade-in';
 
 type DispatchToProps = typeof mapDispatchToProps;
 type StateToProps = ReturnType<typeof mapStateToProps>;
@@ -46,32 +47,34 @@ const HomePage = ({
                 <section
                     className={combineClasses(classes.Section, classes.Banner)}
                 >
-                    <div className={classes.Introduction}>
-                        <h1>
-                            <FlipChars>L</FlipChars>
-                        </h1>
-                        <div>
-                            <Markdown>{homePageData.introShort}</Markdown>
-                            <p className={classes.EmploymentStatus}>
-                                Currently an {homePageData.employeeStatus.title}{' '}
-                                at{' '}
-                                <strong>
-                                    <a
-                                        href={
-                                            homePageData.employeeStatus.company
-                                                .link
-                                        }
-                                        target="_blank"
-                                    >
-                                        {
-                                            homePageData.employeeStatus.company
-                                                .name
-                                        }
-                                    </a>
-                                </strong>
-                            </p>
+                    <FadeInContainer delay={150}>
+                        <div className={classes.Introduction}>
+                            <h1>
+                                <FlipChars>L</FlipChars>
+                            </h1>
+                            <div>
+                                <Markdown>{homePageData.introShort}</Markdown>
+                                <p className={classes.EmploymentStatus}>
+                                    Currently an{' '}
+                                    {homePageData.employeeStatus.title} at{' '}
+                                    <strong>
+                                        <a
+                                            href={
+                                                homePageData.employeeStatus
+                                                    .company.link
+                                            }
+                                            target="_blank"
+                                        >
+                                            {
+                                                homePageData.employeeStatus
+                                                    .company.name
+                                            }
+                                        </a>
+                                    </strong>
+                                </p>
+                            </div>
                         </div>
-                    </div>
+                    </FadeInContainer>
                 </section>
                 <section
                     className={combineClasses(

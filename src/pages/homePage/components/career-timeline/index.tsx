@@ -6,6 +6,8 @@ import {
 import 'react-vertical-timeline-component/style.min.css';
 import theme from '../../../../styles/themePrimary';
 
+// 'Vertical timeline ref: https://stephane-monnot.github.io/react-vertical-timeline/#/'
+//
 const CareerTimeline = (): ReactElement => {
     const careerData = [
         {
@@ -46,6 +48,7 @@ const CareerTimeline = (): ReactElement => {
                         contentArrowStyle={{
                             borderRight: '7px solid ' + theme.colorNight,
                         }}
+                        key={key}
                         date={
                             data.start +
                             ' - ' +

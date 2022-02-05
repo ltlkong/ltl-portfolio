@@ -11,6 +11,18 @@ import theme from '../../../../styles/themePrimary';
 const CareerTimeline = (): ReactElement => {
     const careerData = [
         {
+            title: 'Software developer student',
+            company: {
+                name: 'College',
+                link: '',
+                city: 'Winnipeg',
+                province: 'Manitoba',
+            },
+            start: '9/20/2020',
+            end: '8/20/2021',
+            description: null,
+        },
+        {
             title: 'Web developer',
             company: {
                 name: 'Rally the Locals',

@@ -13,7 +13,7 @@ import PageLayout, { Main } from '../../components/pageLayout';
 import Bookmark from '../../components/bookmark';
 import CustomFooter from '../components/customFooter';
 import CareerTimeline from './components/career-timeline';
-import FadeInContainer from 'react-fade-in';
+import ScrollAnimation from 'react-animate-on-scroll';
 
 type DispatchToProps = typeof mapDispatchToProps;
 type StateToProps = ReturnType<typeof mapStateToProps>;
@@ -47,7 +47,10 @@ const HomePage = ({
                 <section
                     className={combineClasses(classes.Section, classes.Banner)}
                 >
-                    <FadeInContainer delay={150}>
+                    <ScrollAnimation
+                        animateIn="animate__animated animate__slideInLeft"
+                        animateOnce={true}
+                    >
                         <div className={classes.Introduction}>
                             <h1>
                                 <FlipChars>L</FlipChars>
@@ -74,23 +77,26 @@ const HomePage = ({
                                 </p>
                             </div>
                         </div>
-                    </FadeInContainer>
+                    </ScrollAnimation>
                 </section>
-                <section
-                    className={combineClasses(
-                        classes.Section,
-                        classes.AboutSection
-                    )}
-                >
-                    <div className={classes.AboutMeImgContainer}>
-                        <img src={homePageData.myPicture} />
-                    </div>
-                    <div className={classes.AboutMeIntro}>
-                        <h3>A BIT ABOUT ME</h3>
-                        <Markdown>{homePageData.aboutMe}</Markdown>
-                    </div>
+                <section className={classes.Section}>
+                    <ScrollAnimation
+                        animateIn="animate__animated animate__slideInRight"
+                        animateOnce={true}
+                    >
+                        <div className={classes.AboutSection}>
+                            <div className={classes.AboutMeImgContainer}>
+                                <img src={homePageData.myPicture} />
+                            </div>
+                            <div className={classes.AboutMeIntro}>
+                                <h3>A BIT ABOUT ME</h3>
+                                <Markdown>{homePageData.aboutMe}</Markdown>
+                            </div>
+                        </div>
+                    </ScrollAnimation>
                 </section>
                 <section className={combineClasses(classes.Section)}>
+                    <h2>My Career path</h2>
                     <CareerTimeline />
                 </section>
             </Main>

@@ -84,7 +84,7 @@ const HomePage = ({
                         animateIn="animate__animated animate__slideInRight"
                         animateOnce={true}
                     >
-                        <div className={classes.AboutSection}>
+                        <div className={classes.About}>
                             <div className={classes.AboutMeImgContainer}>
                                 <img src={homePageData.myPicture} />
                             </div>

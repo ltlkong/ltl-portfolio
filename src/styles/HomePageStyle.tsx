@@ -63,8 +63,9 @@ const styles = (theme: ThemePrimary) => ({
             color: 'ghostwhite',
         },
     },
-    AboutSection: {
+    About: {
         composes: 'd-flex flex-wrap justify-content-evenly p-4',
+        marginTop: '20vh',
     },
     AboutMeImgContainer: {
         composes: 'col-8 col-md-4 m-auto m-md-0 d-block',

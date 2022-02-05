@@ -31,7 +31,7 @@ const homePageData = {
         },
     },
     aboutMe: `Currently, I'm an Application developer working on the lottery app and web development at Pollard Banknote Ltd. Previously, I did internship at Rally the Locals as a web developer.`,
-    myPicture: 'https://i.redd.it/1pmsjnk8f1g01.jpg',
+    myPicture: myPic,
 };
 
 const HomePage = ({

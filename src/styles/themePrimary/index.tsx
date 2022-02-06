@@ -3,14 +3,15 @@ const themePrimary = {
     colorSecondary: 'rgb(74, 109, 136)',
     colorNight: 'rgb(1, 12, 30)',
     colorDark: 'rgb(0, 30, 56)',
-    backgroundColorHome: 'rgb(213,217,224)',
+    backgroundHome: 'linear-gradient(to right, #8e9eab, #eef2f3)',
     textColorPrimary: 'rgb(0, 30, 56)',
     textMagic: {
-        backgroundImage: 'linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%)',
+        backgroundImage: 'linear-gradient(to right, #abbaab, #ffffff)',
         backgroundRepeat: 'no-repeat',
         backgroundSize: '100% 0.2em',
         backgroundPosition: '0 88%',
         transition: 'background-size 0.12s ease-in',
+        padding: '0.5em',
         '&:hover': {
             backgroundSize: '100% 88%',
         },

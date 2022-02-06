@@ -3,7 +3,7 @@ import meW from '../assets/imgs/meW.png';
 
 const styles = (theme: Theme) => ({
     Home: {
-        backgroundColor: theme.backgroundColorHome,
+        background: theme.backgroundHome,
         color: theme.textColorPrimary,
 
         '& *::selection': {
@@ -18,7 +18,7 @@ const styles = (theme: Theme) => ({
         },
     },
     Bookmark: {
-        backgroundColor: theme.backgroundColorHome,
+        background: theme.backgroundHome,
     },
     Banner: {
         composes: 'd-flex align-items-center position-relative',

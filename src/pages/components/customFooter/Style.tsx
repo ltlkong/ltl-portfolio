@@ -3,7 +3,7 @@ import { Theme } from '../../../styles/themePrimary';
 const styles = (theme: Theme) => ({
     Footer: {
         composes: 'd-flex flex-wrap justify-content-center align-items-center',
-        backgroundColor: theme.backgroundColorHome,
+        background: theme.backgroundHome,
         fontSize: '.7em',
         height: '10vh',
         borderTop: '3px solid #bbb',
@@ -11,6 +11,11 @@ const styles = (theme: Theme) => ({
         '& div': {
             textAlign: 'center',
             width: '40%',
+        },
+
+        '& a': {
+            color: theme.textColorPrimary,
+            ...theme.textMagic,
         },
     },
 });

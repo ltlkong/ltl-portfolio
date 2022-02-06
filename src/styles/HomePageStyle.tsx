@@ -20,6 +20,10 @@ const styles = (theme: Theme) => ({
     Bookmark: {
         background: theme.backgroundHome,
     },
+    Footer: {
+        background: theme.backgroundHome,
+
+    },
     Banner: {
         composes: 'd-flex align-items-center position-relative',
         height: '100vh',

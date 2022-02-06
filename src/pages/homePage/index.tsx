@@ -98,7 +98,7 @@ const HomePage = ({
                     <CareerTimeline />
                 </section>
             </Main>
-            <CustomFooter />
+            <CustomFooter className={classes.Footer} />
         </PageLayout>
     );
 };

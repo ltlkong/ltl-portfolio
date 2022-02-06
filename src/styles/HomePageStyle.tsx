@@ -10,10 +10,12 @@ const styles = (theme: ThemePrimary) => ({
             color: theme.colorPrimary,
             backgroundColor: theme.textColorPrimary,
         },
-    },
-    Section: {
-        width: '100vw',
-        minHeight: '100vh',
+
+        '& section': {
+            width: '100vw',
+            minHeight: '100vh',
+            padding: '1px',
+        },
     },
     Bookmark: {
         backgroundColor: theme.backgroundColorHome,
@@ -72,9 +74,6 @@ const styles = (theme: ThemePrimary) => ({
         '& img': {
             width: '100%',
         },
-    },
-    AboutMeIntro: {
-        composes: 'col-md-6',
     },
 });
 

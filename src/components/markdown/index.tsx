@@ -2,7 +2,7 @@ import React, { ReactElement, HTMLProps } from 'react';
 import withStyles, { WithStylesProps } from 'react-jss';
 import ReactMarkdown from 'react-markdown';
 
-interface IProps extends HTMLProps<HTMLDivElement> {
+interface IProps extends HTMLProps<ReactElement> {
     children?: string;
 }
 

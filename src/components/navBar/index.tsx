@@ -4,7 +4,7 @@ import withStyles, { WithStylesProps } from 'react-jss';
 
 interface IProps
     extends WithStylesProps<typeof styles>,
-        HTMLProps<HTMLDivElement> {
+        HTMLProps<ReactElement> {
     children: any;
 }
 

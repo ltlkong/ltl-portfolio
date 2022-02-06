@@ -44,9 +44,7 @@ const HomePage = ({
         <PageLayout>
             <Bookmark className={classes.Bookmark} />
             <Main className={classes.Home}>
-                <section
-                    className={combineClasses(classes.Section, classes.Banner)}
-                >
+                <section className={combineClasses(classes.Banner)}>
                     <ScrollAnimation
                         animateIn="animate__animated animate__slideInLeft"
                         animateOnce={true}
@@ -79,7 +77,7 @@ const HomePage = ({
                         </div>
                     </ScrollAnimation>
                 </section>
-                <section className={classes.Section}>
+                <section>
                     <ScrollAnimation
                         animateIn="animate__animated animate__slideInRight"
                         animateOnce={true}
@@ -88,14 +86,14 @@ const HomePage = ({
                             <div className={classes.AboutMeImgContainer}>
                                 <img src={homePageData.myPicture} />
                             </div>
-                            <div className={classes.AboutMeIntro}>
+                            <div className={'col-md-6 mt-4'}>
                                 <h3>A BIT ABOUT ME</h3>
                                 <Markdown>{homePageData.aboutMe}</Markdown>
                             </div>
                         </div>
                     </ScrollAnimation>
                 </section>
-                <section className={combineClasses(classes.Section)}>
+                <section className={combineClasses('p-4')}>
                     <h2>My Career path</h2>
                     <CareerTimeline />
                 </section>

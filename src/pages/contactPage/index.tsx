@@ -30,7 +30,7 @@ const ContactPage = ({
     return (
         <PageLayout>
             <Bookmark className={classes.Bookmark} />
-            <Main>
+            <Main className={classes.Contact}>
                 <section>
                     <ContactForm />
                 </section>

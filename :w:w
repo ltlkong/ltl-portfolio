@@ -17,9 +17,9 @@ const styles = (theme: Theme) => ({
         },
     },
     Person: {
-        composes: 'start-0 bottom-0',
-        fontSize: '5px',
-    },
+        composes:'start-0 top-0',
+        fontSize: '.7em',
+    }
 });
 
 export default styles;

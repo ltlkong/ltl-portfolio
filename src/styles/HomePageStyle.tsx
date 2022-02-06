@@ -12,7 +12,6 @@ const styles = (theme: Theme) => ({
         },
 
         '& section': {
-            width: '100vw',
             minHeight: '100vh',
             padding: '1px',
         },
@@ -22,7 +21,6 @@ const styles = (theme: Theme) => ({
     },
     Footer: {
         background: theme.backgroundHome,
-
     },
     Banner: {
         composes: 'd-flex align-items-center position-relative',

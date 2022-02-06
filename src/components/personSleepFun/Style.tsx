@@ -23,11 +23,13 @@ const styles = {
         position: 'absolute',
         '& div': {
             position: 'relative',
+            backgroundColor: 'black',
+            borderColor: 'black',
         },
         '& div:first-child': {
             ...position(1.8, -0.8),
             ...size(3.3, 3),
-            borderWidth: '0.1em',
+            borderWidth: '0.15em',
             borderStyle: 'solid',
             borderRadius: '50%',
             backgroundColor: 'transparent',

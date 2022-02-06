@@ -35,7 +35,7 @@ const AppLayout = ({
                 <CSSTransition
                     classNames={'fade'}
                     key={location.key}
-                    timeout={300}
+                    timeout={1000}
                 >
                     <Routes location={location}>
                         {routes.map((props, key) => (

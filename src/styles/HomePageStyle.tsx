@@ -1,7 +1,7 @@
-import { ThemePrimary } from './themePrimary';
+import { Theme } from './themePrimary';
 import meW from '../assets/imgs/meW.png';
 
-const styles = (theme: ThemePrimary) => ({
+const styles = (theme: Theme) => ({
     Home: {
         backgroundColor: theme.backgroundColorHome,
         color: theme.textColorPrimary,

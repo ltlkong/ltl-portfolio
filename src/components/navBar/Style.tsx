@@ -1,6 +1,6 @@
-import { ThemePrimary } from '../../styles/themePrimary';
+import { Theme } from '../../styles/themePrimary';
 
-const styles = (theme: ThemePrimary) => ({
+const styles = (theme: Theme) => ({
     Nav: {
         position: 'fixed',
         zIndex: 100,

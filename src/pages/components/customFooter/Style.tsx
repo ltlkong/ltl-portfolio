@@ -1,6 +1,6 @@
-import { ThemePrimary } from '../../../styles/themePrimary';
+import { Theme } from '../../../styles/themePrimary';
 
-const styles = (theme: ThemePrimary) => ({
+const styles = (theme: Theme) => ({
     Footer: {
         composes: 'd-flex flex-wrap justify-content-center align-items-center',
         backgroundColor: theme.backgroundColorHome,

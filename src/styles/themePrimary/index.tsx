@@ -20,4 +20,4 @@ const themePrimary = {
 
 export default themePrimary;
 
-export type ThemePrimary = typeof themePrimary;
+export type Theme = typeof themePrimary;

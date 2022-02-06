@@ -1,13 +1,13 @@
-import { Theme } from '../../styles/themePrimary';
+import { ThemePrimary } from '../../styles/themePrimary';
 
-const styles = (theme: Theme) => ({
+const styles = (theme: ThemePrimary) => ({
     Bookmark: {
         composes: 'position-absolute',
         top: '0',
         left: '8vw',
         backgroundColor: theme.colorNight,
         width: '50px',
-        height: '13vh',
+        height: '10vh',
         zIndex: 100,
 
         '& h1': {

@@ -1,6 +1,6 @@
-import { ThemePrimary } from './themePrimary';
+import { Theme } from './themePrimary';
 
-const styles = (theme: ThemePrimary) => ({
+const styles = (theme: Theme) => ({
     Nav: {
         composes: 'd-flex flex-column fw-bolder',
         right: '10%',

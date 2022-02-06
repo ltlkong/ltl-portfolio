@@ -9,9 +9,10 @@ const styles = (theme: ThemePrimary) => ({
         '&:before': {
             content: '"ltl-main"',
             position: 'absolute',
-            opacity: '.2',
+            opacity: '.1',
             top: 0,
-            right: '5px',
+            right: '10px',
+            fontSize: '16px',
         },
     },
     Footer: {
@@ -19,9 +20,10 @@ const styles = (theme: ThemePrimary) => ({
         '&:before': {
             content: '"ltl-footer"',
             position: 'absolute',
-            opacity: '.2',
+            opacity: '.1',
             top: 0,
-            right: '5px',
+            right: '10px',
+            fontSize: '16px',
         },
     },
 });

@@ -13,7 +13,7 @@ const CareerTimeline = ({
 }: HTMLProps<ReactElement>): ReactElement => {
     const careerData = [
         {
-            title: 'Software developer student',
+            title: 'Software Developer student',
             company: {
                 name: 'College',
                 link: '',
@@ -25,7 +25,7 @@ const CareerTimeline = ({
             description: null,
         },
         {
-            title: 'Web developer',
+            title: 'Web Developer',
             company: {
                 name: 'Rally the Locals',
                 link: 'https://www.rallythelocals.com',
@@ -37,7 +37,7 @@ const CareerTimeline = ({
             description: null,
         },
         {
-            title: 'Application developer',
+            title: 'Application Developer',
             company: {
                 name: 'Pollard Banknote Ltd.',
                 link: 'https://www.pollardbanknote.com',

@@ -93,7 +93,7 @@ const HomePage = ({
                         </div>
                     </ScrollAnimation>
                 </section>
-                <section className={combineClasses('p-4')}>
+                <section className={'p-4'}>
                     <h2>My Career path</h2>
                     <CareerTimeline />
                 </section>

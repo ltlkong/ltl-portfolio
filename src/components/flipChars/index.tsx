@@ -4,7 +4,7 @@ import styles from './Style';
 
 type Classes = WithStylesProps<typeof styles>;
 
-interface IProps extends Classes, HTMLProps<HTMLDivElement> {
+interface IProps extends Classes, HTMLProps<ReactElement> {
     children: string | string[];
 }
 

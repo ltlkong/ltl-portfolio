@@ -1,5 +1,5 @@
 const combineClasses = (...args: string[]) => {
-    return args.join(' ');
+  return args.join(' ');
 };
 
 export default combineClasses;

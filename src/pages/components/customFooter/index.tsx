@@ -28,12 +28,11 @@ const CustomFooter = ({ classes, className = '', myName, email }: IProps): React
 
 const mapStateToProps = ({
   myInfo: {
-    basicInfo: { name },
-    socialAccounts: { email },
+    basicInfo: { name, emails },
   },
 }: IRootState) => ({
   myName: name,
-  email: email,
+  email: emails[0],
 });
 
 export default connect(mapStateToProps)(withStyles(styles)(CustomFooter));

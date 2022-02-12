@@ -81,6 +81,18 @@ const styles = (theme: Theme) => ({
       color: theme.textColorPrimary,
     },
   },
+  SocialAccountsBar: {
+    composes: 'animate__animated animate__fadeInUp',
+    left: '3%',
+    bottom: '5%',
+    animationDelay: '.5s',
+    '& li': {
+      transition: 'transform .5s',
+    },
+    '& li:hover': {
+      transform: 'translateY(-5px)',
+    },
+  },
 });
 
 export default styles;

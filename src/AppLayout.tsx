@@ -10,6 +10,7 @@ import links from './routes/links';
 import { TransitionGroup, CSSTransition } from 'react-transition-group';
 import NavBar from './components/navBar';
 import Loading from './components/loading';
+import combineClasses from './utils/combineClasses';
 
 type StateToProps = ReturnType<typeof mapStateToProps>;
 type DispatchToProps = typeof mapDispatchToProps;
@@ -30,6 +31,20 @@ const AppLayout = ({ isLoading, loadingLabel, stopLoading, classes }: IAppLayout
 
   return (
     <>
+      <NavBar className={classes.Nav}>
+        {links.map((props, key) => {
+          const isCurrentRoute = props.to === location.pathname;
+          const activeClassName = isCurrentRoute ? 'active' : '';
+          const animationClassName = 'animate__animated animate__slideInDown';
+          const className = combineClasses(activeClassName, animationClassName);
+
+          return (
+            <Link key={key} to={props.to} className={className}>
+              {props.name}
+            </Link>
+          );
+        })}
+      </NavBar>
       <TransitionGroup component={null}>
         <CSSTransition classNames={'fade'} key={location.key} timeout={1000}>
           <Routes location={location}>
@@ -39,19 +54,6 @@ const AppLayout = ({ isLoading, loadingLabel, stopLoading, classes }: IAppLayout
           </Routes>
         </CSSTransition>
       </TransitionGroup>
-
-      <NavBar className={classes.Nav}>
-        {links.map((props, key) => {
-          const isCurrentRoute = props.to === location.pathname;
-          const linkClassName = isCurrentRoute ? 'active' : '';
-
-          return (
-            <Link key={key} to={props.to} className={linkClassName}>
-              {props.name}
-            </Link>
-          );
-        })}
-      </NavBar>
     </>
   );
 };

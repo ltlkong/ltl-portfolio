@@ -15,6 +15,7 @@ import CustomFooter from '../components/customFooter';
 import CareerTimeline from './components/career-timeline';
 import ScrollAnimation from 'react-animate-on-scroll';
 import scrollToTheTop from '../../utils/scrollToTheTop';
+import SocialAccountsBar from './components/socialAccountsBar';
 
 type DispatchToProps = typeof mapDispatchToProps;
 type StateToProps = ReturnType<typeof mapStateToProps>;
@@ -32,7 +33,7 @@ const HomePage = ({ classes, toggleLoading, isLoading, loadingLabel, homePageDat
       <Bookmark className={classes.Bookmark} />
       <Main className={classes.Home}>
         <section className={combineClasses(classes.Banner)}>
-          <ScrollAnimation animateIn="animate__animated animate__slideInLeft" animateOnce={true}>
+          <ScrollAnimation animateIn="animate__animated animate__slideInLeft" animateOnce={true} delay={300}>
             <div className={classes.Introduction}>
               <h1>
                 <FlipChars>L</FlipChars>
@@ -52,7 +53,7 @@ const HomePage = ({ classes, toggleLoading, isLoading, loadingLabel, homePageDat
           </ScrollAnimation>
         </section>
         <section>
-          <ScrollAnimation animateIn="animate__animated animate__slideInRight" animateOnce={true}>
+          <ScrollAnimation animateIn="animate__animated animate__slideInRight" animateOnce={true} delay={300}>
             <div className={classes.About}>
               <div className={classes.AboutMeImgContainer}>
                 <img src={homePageData.myPicture} />
@@ -69,6 +70,7 @@ const HomePage = ({ classes, toggleLoading, isLoading, loadingLabel, homePageDat
           <CareerTimeline className={classes.CareerTimeline} />
         </section>
       </Main>
+      <SocialAccountsBar className={classes.SocialAccountsBar} />
       <CustomFooter className={classes.Footer} />
     </PageLayout>
   );

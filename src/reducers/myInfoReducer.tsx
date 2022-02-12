@@ -8,6 +8,7 @@ export interface IMyInfoAction {
 
 const basicInfo = {
   name: 'Tielin Li',
+  emails: ['tielinli@yahoo.com'],
   introShort: `Hey, I'm **Tielin Li**. I'm a **programmer** working on Full-Stack development.`,
   employeeStatus: {
     title: 'Application developer',
@@ -24,6 +25,7 @@ const basicInfo = {
 const career = [
   {
     title: 'Software Developer student',
+
     company: {
       name: 'College',
       link: '',
@@ -61,10 +63,22 @@ const career = [
 ];
 
 const socialAccounts = {
-  github: '',
-  linkedin: '',
-  email: 'tielin li',
-  instagram: '',
+  github: {
+    icon: 'fa-brands fa-github',
+    link: 'https://github.com/ltlkong',
+  },
+  linkedin: {
+    icon: 'fa-brands fa-linkedin',
+    link: '',
+  },
+  instagram: {
+    icon: 'fa-brands fa-instagram',
+    link: '',
+  },
+  wechat: {
+    icon: 'fa-brands fa-weixin',
+    link: '',
+  },
 };
 
 const initialState = {

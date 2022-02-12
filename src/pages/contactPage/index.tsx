@@ -30,11 +30,11 @@ const ContactPage = ({ classes, toggleLoading, isLoading, loadingLabel }: IProps
     <PageLayout>
       <Bookmark className={classes.Bookmark} />
       <Main className={classes.Contact}>
-        <section>
+        <section className={'d-flex justify-content-center align-items-center'}>
           <ContactForm />
         </section>
       </Main>
-      <CustomFooter />
+      <CustomFooter className={classes.Footer} />
     </PageLayout>
   );
 };

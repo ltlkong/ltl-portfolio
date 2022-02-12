@@ -53,7 +53,7 @@ const HomePage = ({ classes, toggleLoading, isLoading, loadingLabel, homePageDat
           </ScrollAnimation>
         </section>
         <section>
-          <ScrollAnimation animateIn="animate__animated animate__slideInRight" animateOnce={true} delay={300}>
+          <ScrollAnimation animateIn="animate__animated animate__slideInRight" animateOnce={true} delay={150}>
             <div className={classes.About}>
               <div className={classes.AboutMeImgContainer}>
                 <img src={homePageData.myPicture} />

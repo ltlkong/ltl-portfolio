@@ -70,6 +70,7 @@ const socialAccounts = {
 const initialState = {
   basicInfo,
   career,
+  socialAccounts,
 };
 
 const myInfoReducer = (state = initialState, action: IMyInfoAction) => {

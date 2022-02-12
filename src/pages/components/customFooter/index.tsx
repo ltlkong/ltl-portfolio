@@ -6,20 +6,18 @@ import { Footer } from '../../../components/pageLayout';
 import PersonSleepFun from '../../../components/personSleepFun';
 import combineClasses from '../../../utils/combineClasses';
 import { connect } from 'react-redux';
-import { IRootState } from '../../../../store';
+import { IRootState } from '../../../store';
 
 type Classes = WithStylesProps<typeof styles>;
 
 interface IProps extends Classes, HTMLProps<ReactElement>, ReturnType<typeof mapStateToProps> {}
 
-const CustomFooter = ({ classes, className = '', name, email }: IProps): ReactElement => {
-  const mailto = email;
-
+const CustomFooter = ({ classes, className = '', myName, email }: IProps): ReactElement => {
   return (
     <Footer className={combineClasses('position-relative', className)}>
       <div className={classes.FooterContent}>
         <div>
-          Contact me: <a href={`mailto:${mailto}`}>{name}</a> or <Link to="/contact">Contact page</Link>
+          Contact me: <a href={`mailto:${email}`}>{myName}</a> or <Link to="/contact">Contact page</Link>
         </div>
         <div>Last Updated At 2022</div>
       </div>
@@ -31,11 +29,11 @@ const CustomFooter = ({ classes, className = '', name, email }: IProps): ReactEl
 const mapStateToProps = ({
   myInfo: {
     basicInfo: { name },
+    socialAccounts: { email },
   },
-  socialAccounts: { email },
 }: IRootState) => ({
-  name,
-  email,
+  myName: name,
+  email: email,
 });
 
 export default connect(mapStateToProps)(withStyles(styles)(CustomFooter));

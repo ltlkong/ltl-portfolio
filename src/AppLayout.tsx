@@ -23,7 +23,7 @@ const AppLayout = ({ isLoading, loadingLabel, stopLoading, classes }: IAppLayout
   useEffect(() => {
     setTimeout(() => {
       stopLoading();
-    }, 1500);
+    }, 3000);
   }, []);
 
   if (isLoading) return <Loading />;
@@ -43,9 +43,10 @@ const AppLayout = ({ isLoading, loadingLabel, stopLoading, classes }: IAppLayout
       <NavBar className={classes.Nav}>
         {links.map((props, key) => {
           const isCurrentRoute = props.to === location.pathname;
+          const linkClassName = isCurrentRoute ? 'active' : '';
 
           return (
-            <Link key={key} to={props.to} className={isCurrentRoute ? 'active' : ''}>
+            <Link key={key} to={props.to} className={linkClassName}>
               {props.name}
             </Link>
           );

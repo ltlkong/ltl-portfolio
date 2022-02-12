@@ -2,7 +2,7 @@ import emptyObj from '../utils/emptyObj';
 
 type MyInfoActionTypes = 'GET' | 'EMPTY';
 
-interface IMyInfoAction {
+export interface IMyInfoAction {
   type: MyInfoActionTypes;
 }
 

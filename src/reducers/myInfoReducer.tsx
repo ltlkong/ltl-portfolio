@@ -7,6 +7,7 @@ interface IMyInfoAction {
 }
 
 const basicInfo = {
+  name: 'Tielin Li',
   introShort: `Hey, I'm **Tielin Li**. I'm a **programmer** working on Full-Stack development.`,
   employeeStatus: {
     title: 'Application developer',
@@ -58,6 +59,13 @@ const career = [
     description: null,
   },
 ];
+
+const socialAccounts = {
+  github: '',
+  linkedin: '',
+  email: 'tielin li',
+  instagram: '',
+};
 
 const initialState = {
   basicInfo,

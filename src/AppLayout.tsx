@@ -18,10 +18,12 @@ type Classes = WithStylesProps<typeof styles>;
 
 interface IAppLayoutProps extends StateToProps, DispatchToProps, Classes {}
 
-const AppLayout = ({ isLoading, loadingLabel, stopLoading, classes }: IAppLayoutProps): ReactElement => {
+const AppLayout = ({ isLoading, loadingLabel, stopLoading, classes, startLoading }: IAppLayoutProps): ReactElement => {
   const location = useLocation();
 
   useEffect(() => {
+    startLoading();
+
     setTimeout(() => {
       stopLoading();
     }, 3000);
@@ -60,6 +62,7 @@ const AppLayout = ({ isLoading, loadingLabel, stopLoading, classes }: IAppLayout
 
 const mapDispatchToProps = {
   stopLoading,
+  startLoading,
 };
 
 const mapStateToProps = ({ loading: { isLoading, label } }: IRootState) => ({

@@ -11,6 +11,7 @@ import { TransitionGroup, CSSTransition } from 'react-transition-group';
 import NavBar from './components/navBar';
 import Loading from './components/loading';
 import combineClasses from './utils/combineClasses';
+import scrollToTheTop from './utils/scrollToTheTop';
 
 type StateToProps = ReturnType<typeof mapStateToProps>;
 type DispatchToProps = typeof mapDispatchToProps;
@@ -28,6 +29,10 @@ const AppLayout = ({ isLoading, loadingLabel, stopLoading, classes, startLoading
       stopLoading();
     }, 3000);
   }, []);
+
+  useEffect(() => {
+    scrollToTheTop();
+  }, [location]);
 
   if (isLoading) return <Loading />;
 

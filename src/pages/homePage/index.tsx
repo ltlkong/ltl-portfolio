@@ -1,4 +1,4 @@
-import React, { ReactElement, useState, useEffect } from 'react';
+import React, { ReactElement, useState } from 'react';
 import styles from '../../styles/HomePageStyle';
 import withStyles, { WithStylesProps } from 'react-jss';
 import { toggleLoading } from '../../actions/loadingActions';
@@ -14,7 +14,6 @@ import Bookmark from '../../components/bookmark';
 import CustomFooter from '../components/customFooter';
 import CareerTimeline from './components/career-timeline';
 import ScrollAnimation from 'react-animate-on-scroll';
-import scrollToTheTop from '../../utils/scrollToTheTop';
 import SocialAccountsBar from './components/socialAccountsBar';
 
 type DispatchToProps = typeof mapDispatchToProps;
@@ -24,10 +23,6 @@ type Classes = WithStylesProps<typeof styles>;
 interface IProps extends Classes, DispatchToProps, StateToProps {}
 
 const HomePage = ({ classes, toggleLoading, isLoading, loadingLabel, homePageData }: IProps): ReactElement => {
-  useEffect(() => {
-    scrollToTheTop();
-  }, []);
-
   return (
     <PageLayout>
       <Bookmark className={classes.Bookmark} />

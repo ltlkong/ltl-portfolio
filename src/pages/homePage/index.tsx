@@ -22,24 +22,11 @@ type Classes = WithStylesProps<typeof styles>;
 
 interface IProps extends Classes, DispatchToProps, StateToProps {}
 
-const homePageData = {
-  introShort: `Hey, I'm **Tielin Li**. I'm a **programmer** working on Full-Stack development.`,
-  employeeStatus: {
-    title: 'Application developer',
-    company: {
-      name: 'Pollard Banknote Ltd.',
-      link: 'https://www.pollardbanknote.com',
-    },
-  },
-  aboutMe: `Currently, I'm an Application developer working on the lottery app and web development at Pollard Banknote Ltd. Previously, I did internship at Rally the Locals as a web developer.`,
-  myPicture:
-    'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRfUJotBDs2jTiNGiShQ9DFQ3oF2R0X0EZjjlHeYBr7ZI27ik0YyNhl1bCPwznqdOwWms&usqp=CAU',
-};
-
-const HomePage = ({ classes, toggleLoading, isLoading, loadingLabel }: IProps): ReactElement => {
+const HomePage = ({ classes, toggleLoading, isLoading, loadingLabel, homePageData }: IProps): ReactElement => {
   useEffect(() => {
     scrollToTheTop();
   }, []);
+
   return (
     <PageLayout>
       <Bookmark className={classes.Bookmark} />
@@ -79,7 +66,7 @@ const HomePage = ({ classes, toggleLoading, isLoading, loadingLabel }: IProps): 
         </section>
         <section className={'p-4'}>
           <h2>My Career path</h2>
-          <CareerTimeline />
+          <CareerTimeline className={classes.CareerTimeline} />
         </section>
       </Main>
       <CustomFooter className={classes.Footer} />
@@ -87,9 +74,10 @@ const HomePage = ({ classes, toggleLoading, isLoading, loadingLabel }: IProps): 
   );
 };
 
-const mapStateToProps = ({ loading: { isLoading, label } }: IRootState) => ({
+const mapStateToProps = ({ loading: { isLoading, label }, myInfo: { basicInfo } }: IRootState) => ({
   isLoading,
   loadingLabel: label,
+  homePageData: basicInfo,
 });
 
 const mapDispatchToProps = {

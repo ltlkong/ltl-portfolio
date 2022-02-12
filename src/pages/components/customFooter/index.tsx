@@ -32,7 +32,7 @@ const mapStateToProps = ({
   },
 }: IRootState) => ({
   myName: name,
-  email: emails[0],
+  email: emails.length > 0 ? emails[0] : '',
 });
 
 export default connect(mapStateToProps)(withStyles(styles)(CustomFooter));

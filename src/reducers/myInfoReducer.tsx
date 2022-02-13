@@ -73,11 +73,15 @@ const socialAccounts = {
   },
   instagram: {
     icon: 'fa-brands fa-instagram',
-    link: '',
+    link: 'https://www.instagram.com/tielin_li/?hl=en',
   },
   wechat: {
     icon: 'fa-brands fa-weixin',
     link: '',
+  },
+  bilibili: {
+    icon: 'fa-brands fa-bilibili',
+    link: 'https://space.bilibili.com/19474186?from=search&seid=567741156219813303&spm_id_from=333.337.0.0',
   },
 };
 

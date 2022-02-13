@@ -5,7 +5,7 @@ const themePrimary = {
   colorSecondary: 'rgb(74, 109, 136)',
   colorNight: 'rgb(1, 12, 30)',
   colorDark: 'rgb(0, 30, 56)',
-  backgroundHome: 'linear-gradient(to right, #00416a, #e4e5e6)',
+  backgroundHome: 'linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(144,166,213,1) 0%, rgba(230,239,241,1) 100%);',
   backgroundContact: generateGradient(),
   textColorPrimary: 'rgb(0, 30, 56)',
   textMagic: {

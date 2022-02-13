@@ -48,17 +48,15 @@ const HomePage = ({ classes, toggleLoading, isLoading, loadingLabel, homePageDat
           </ScrollAnimation>
         </section>
         <section>
-          <ScrollAnimation animateIn="animate__animated animate__slideInRight" animateOnce={true} delay={150}>
-            <div className={classes.About}>
-              <div className={classes.AboutMeImgContainer}>
-                <img src={homePageData.myPicture} />
-              </div>
-              <div className={'col-md-6 mt-4'}>
-                <h3>A BIT ABOUT ME</h3>
-                <Markdown>{homePageData.aboutMe}</Markdown>
-              </div>
-            </div>
-          </ScrollAnimation>
+          <div className={classes.About}>
+            <ScrollAnimation animateIn="animate__animated animate__slideInLeft" animateOnce={true} className={classes.AboutMeImgContainer}>
+              <img src={homePageData.myPicture} />
+            </ScrollAnimation>
+            <ScrollAnimation animateIn="animate__animated animate__slideInRight" animateOnce={true} className={'col-md-6 mt-4'}>
+              <h3>A BIT ABOUT ME</h3>
+              <Markdown>{homePageData.aboutMe}</Markdown>
+            </ScrollAnimation>
+          </div>
         </section>
         <section className={'p-4'}>
           <h2>My Career path</h2>

@@ -19,6 +19,7 @@ const styles = (theme: Theme) => ({
     marginBottom: '2vh',
     color: 'transparent',
     backgroundClip: 'text !important',
+    '-webkit-background-clip': 'text !important',
   },
 });
 

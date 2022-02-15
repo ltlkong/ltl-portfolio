@@ -5,7 +5,7 @@ import { reloadInfoData, emptyAllInfoData } from './actions/myInfoActions';
 import { IRootState } from './store';
 import { connect } from 'react-redux';
 import styles from './styles/AppLayoutStyle';
-import { Routes, Route, Link, useLocation } from 'react-router-dom';
+import { Routes, Route, Link, useLocation, Navigate } from 'react-router-dom';
 import routes from './routes';
 import links from './routes/links';
 import { TransitionGroup, CSSTransition } from 'react-transition-group';
@@ -13,6 +13,7 @@ import NavBar from './components/navBar';
 import Loading from './components/loading';
 import combineClasses from './utils/combineClasses';
 import scrollToTheTop from './utils/scrollToTheTop';
+import NotFoundPage from './pages/NotFoundPage';
 
 type StateToProps = ReturnType<typeof mapStateToProps>;
 type DispatchToProps = typeof mapDispatchToProps;
@@ -38,6 +39,8 @@ const AppLayout = ({ isLoading, loadingLabel, stopLoading, classes, startLoading
 
   if (isLoading) return <Loading />;
 
+  if (!links.find(link => link.to === location.pathname && link.active)) return <NotFoundPage />;
+
   return (
     <>
       <NavBar className={classes.Nav}>
@@ -57,9 +60,9 @@ const AppLayout = ({ isLoading, loadingLabel, stopLoading, classes, startLoading
       <TransitionGroup component={null}>
         <CSSTransition classNames={'fade'} key={location.key} timeout={1000}>
           <Routes location={location}>
-            {routes.map((props, key) => (
-              <Route key={key} {...props} />
-            ))}
+            {routes.map((props, key) => {
+              return <Route key={key} {...props} />;
+            })}
           </Routes>
         </CSSTransition>
       </TransitionGroup>

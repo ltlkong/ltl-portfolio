@@ -13,9 +13,9 @@ const ContactForm = ({ className }: HTMLProps<ReactElement>): ReactElement => {
 
   return (
     <form className={className}>
-      {fields.map(field => {
+      {fields.map((field, key) => {
         return (
-          <div>
+          <div key={key}>
             <label className={'form-label'}>{field.label}:</label>
             <input className={'form-control'} />
           </div>

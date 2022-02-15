@@ -1,7 +1,7 @@
 import React, { ReactElement, useEffect } from 'react';
 import withStyles, { WithStylesProps } from 'react-jss';
 import { toggleLoading, startLoading, stopLoading } from './actions/loadingActions';
-import { reloadInfoData } from './actions/myInfoActions';
+import { reloadInfoData, emptyAllInfoData } from './actions/myInfoActions';
 import { IRootState } from './store';
 import { connect } from 'react-redux';
 import styles from './styles/AppLayoutStyle';

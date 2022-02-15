@@ -10,6 +10,8 @@ interface IContainerProps extends Classes, HTMLProps<ReactElement> {
 }
 
 const Container = ({ children, classes, className }: IContainerProps): ReactElement => {
+  if (children.length === 0) return <></>;
+
   return (
     <div className={[classes.Bar, className].join(' ')}>
       <ul>{children}</ul>

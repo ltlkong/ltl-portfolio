@@ -32,7 +32,9 @@ const CareerTimeline = ({ className, career }: IProps): ReactElement => {
               }}
             >
               <h4 className="vertical-timeline-element-title">
-                <a href={data.company.link}>{data.title + ' at ' + data.company.name}</a>
+                <a href={data.company.link} target="_blank">
+                  {data.title + ' at ' + data.company.name}
+                </a>
               </h4>
               <div className="vertical-timeline-element-subtitle">{data.company.city + ' ' + data.company.province}</div>
               <p>{data.description}</p>

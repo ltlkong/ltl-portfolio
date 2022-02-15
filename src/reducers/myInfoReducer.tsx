@@ -8,7 +8,7 @@ export interface IMyInfoAction {
 }
 
 const basicInfo = {
-  name: 'Carman',
+  name: 'Tielin Li',
   emails: ['tielinli@yahoo.com'],
   introShort: `Hey, I'm **Tielin Li**. I'm a **programmer** working on Full-Stack development.`,
   employeeStatus: {
@@ -28,7 +28,7 @@ const career = [
 
     company: {
       name: 'College',
-      link: '',
+      link: 'https://mitt.ca',
       city: 'Winnipeg',
       province: 'Manitoba',
     },
@@ -37,10 +37,10 @@ const career = [
     description: null,
   },
   {
-    title: 'Web Developer',
+    title: 'Software Developer',
     company: {
       name: 'Rally the Locals',
-      link: '',
+      link: 'https://www.rallythelocals.com',
       city: 'Winnipeg',
       province: 'Manitoba',
     },

@@ -1,4 +1,5 @@
 import { Theme } from './themePrimary';
+import generateGradient from '../utils/generateGradient';
 
 const styles = (theme: Theme) => ({
   Bookmark: {
@@ -13,6 +14,13 @@ const styles = (theme: Theme) => ({
   },
   Footer: {
     background: theme.backgroundContact,
+  },
+  ContactForm: {
+    padding: '40px',
+    background: generateGradient(),
+    '& button': {
+      color: theme.textColorPrimary,
+    },
   },
 });
 

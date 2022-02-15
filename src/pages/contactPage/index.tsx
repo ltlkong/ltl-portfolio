@@ -31,7 +31,7 @@ const ContactPage = ({ classes, toggleLoading, isLoading, loadingLabel }: IProps
       <Bookmark className={classes.Bookmark} />
       <Main className={classes.Contact}>
         <section className={'d-flex justify-content-center align-items-center'}>
-          <ContactForm />
+          <ContactForm className={classes.ContactForm} />
         </section>
       </Main>
       <CustomFooter className={classes.Footer} />

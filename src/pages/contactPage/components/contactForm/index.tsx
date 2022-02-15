@@ -1,26 +1,35 @@
-import React, { ReactElement } from 'react';
+import React, { ReactElement, HTMLProps } from 'react';
+import Card from 'react-animated-3d-card';
 
-const ContactForm = (): ReactElement => {
-    return (
-        <form>
-            <div>
-                <label>Name</label>
-                <input />
-            </div>
-            <div>
-                <label>Email</label>
-                <input />
-            </div>
-            <div>
-                <label>Subject</label>
-                <input />
-            </div>
-            <div>
-                <label>Message</label>
-                <textarea />
-            </div>
-        </form>
-    );
+const ContactForm = ({ className }: HTMLProps<ReactElement>): ReactElement => {
+  const fields = [
+    {
+      label: 'Name',
+    },
+    {
+      label: 'Email',
+    },
+  ];
+
+  return (
+    <form className={className}>
+      {fields.map(field => {
+        return (
+          <div>
+            <label className={'form-label'}>{field.label}:</label>
+            <input className={'form-control'} />
+          </div>
+        );
+      })}
+      <div>
+        <label className={'form-label'}>Message:</label>
+        <textarea className={'form-control'} />
+      </div>
+      <div>
+        <button className="btn btn-outline-secondary d-block w-100 mt-2">Send</button>
+      </div>
+    </form>
+  );
 };
 
 export default ContactForm;

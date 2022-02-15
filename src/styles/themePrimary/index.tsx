@@ -6,7 +6,7 @@ const themePrimary = {
   colorNight: 'rgb(1, 12, 30)',
   colorDark: 'rgb(0, 30, 56)',
   backgroundHome: 'linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(144,166,213,1) 0%, rgba(230,239,241,1) 100%);',
-  backgroundContact: generateGradient(),
+  backgroundContact: 'linear-gradient(90deg, rgba(110,130,160,0.8), rgba(48,105,143,0.2))',
   textColorPrimary: 'rgb(0, 30, 56)',
   textMagic: {
     backgroundImage: 'linear-gradient(to right, #abbaab, #ffffff)',

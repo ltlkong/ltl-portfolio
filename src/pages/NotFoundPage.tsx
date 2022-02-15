@@ -7,7 +7,10 @@ import { useNavigate } from 'react-router-dom';
 const NotFoundPage = (): ReactElement => {
   const navigate = useNavigate();
   return (
-    <main className="d-flex justify-content-center align-items-center" style={{ width: '100%', height: '100vh' }}>
+    <main
+      className="d-flex justify-content-center align-items-center"
+      style={{ width: '100%', height: '100vh', background: generateGradient() }}
+    >
       <div>
         <Card
           style={{
@@ -21,7 +24,7 @@ const NotFoundPage = (): ReactElement => {
           <div>
             <div>
               <h1 className="text-center mt-4" style={{ fontSize: '20px' }}>
-                PageNotFound
+                PageNotAvailable
               </h1>
               <h3 className="text-center" style={{ fontSize: '16px' }}>
                 go to home page

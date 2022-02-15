@@ -10,14 +10,14 @@ type Classes = WithStylesProps<typeof styles>;
 interface IProps extends Classes, HTMLProps<ReactElement> {}
 
 const Bookmark = ({ classes, className = '' }: IProps): ReactElement => {
-    const location = useLocation();
-    const firstCharOfRoute = getRouteName(location.pathname).charAt(0);
+  const location = useLocation();
+  const firstCharOfRoute = getRouteName(location.pathname).charAt(0);
 
-    return (
-        <div className={combineClasses(classes.Bookmark)}>
-            <h1 className={className}>{firstCharOfRoute}</h1>
-        </div>
-    );
+  return (
+    <div className={combineClasses(classes.Bookmark, className)}>
+      <h1>{firstCharOfRoute}</h1>
+    </div>
+  );
 };
 
 export default withStyles(styles)(Bookmark);

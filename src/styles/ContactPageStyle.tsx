@@ -3,7 +3,9 @@ import generateGradient from '../utils/generateGradient';
 
 const styles = (theme: Theme) => ({
   Bookmark: {
-    background: theme.backgroundContact,
+    '& h1': {
+      background: theme.colorSecondary,
+    },
   },
   Contact: {
     background: theme.backgroundContact,

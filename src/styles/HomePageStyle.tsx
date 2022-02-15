@@ -17,7 +17,9 @@ const styles = (theme: Theme) => ({
     },
   },
   Bookmark: {
-    background: theme.backgroundHome,
+    '& h1': {
+      background: theme.backgroundHome,
+    },
   },
   Footer: {
     background: theme.backgroundHome,

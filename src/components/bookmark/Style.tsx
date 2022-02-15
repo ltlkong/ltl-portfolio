@@ -18,7 +18,7 @@ const styles = (theme: Theme) => ({
       width: '100%',
       marginBottom: '2vh',
       color: 'transparent',
-      backgroundClip: 'text',
+      backgroundClip: 'text !important',
     },
   },
 });

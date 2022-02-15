@@ -8,7 +8,6 @@ import Markdown from '../../components/markdown';
 import FlipChars from '../../components/flipChars';
 import combineClasses from '../../utils/combineClasses';
 import Loading from '../../components/loading';
-import myPic from '../../assets/imgs/mypic.jpeg';
 import PageLayout, { Main } from '../../components/pageLayout';
 import Bookmark from '../../components/bookmark';
 import CustomFooter from '../components/customFooter';

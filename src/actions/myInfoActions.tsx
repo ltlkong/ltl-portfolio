@@ -6,4 +6,10 @@ const emptyAllInfoData = (): IMyInfoAction => {
   };
 };
 
-export { emptyAllInfoData };
+const reloadInfoData = (): IMyInfoAction => {
+  return {
+    type: 'RELOAD',
+  };
+};
+
+export { emptyAllInfoData, reloadInfoData };

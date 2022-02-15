@@ -8,9 +8,9 @@ export interface IMyInfoAction {
 }
 
 const basicInfo = {
-  name: 'Carman',
+  name: 'Tielin Li',
   emails: ['tielinli@yahoo.com'],
-  introShort: `Hey, I'm **Tielin Li**. I'm a **programmer** working on Full-Stack development.`,
+  introShort: `Hey, I'm **${baseInfo.name}**. I'm a **programmer** working on Full-Stack development.`,
   employeeStatus: {
     title: 'Application developer',
     company: {

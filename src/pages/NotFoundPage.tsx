@@ -16,7 +16,6 @@ const NotFoundPage = (): ReactElement => {
           style={{
             background: generateGradient(),
             width: '20rem',
-            height: '300px',
             cursor: 'pointer',
           }}
           onClick={() => navigate('/')}

@@ -9,17 +9,16 @@ const styles = (theme: Theme) => ({
     width: '50px',
     height: '13vh',
     zIndex: 100,
-
-    '& h1': {
-      fontSize: '35px',
-      position: 'absolute',
-      bottom: 0,
-      textAlign: 'center',
-      width: '100%',
-      marginBottom: '2vh',
-      color: 'transparent',
-      backgroundClip: 'text !important',
-    },
+  },
+  Text: {
+    fontSize: '35px',
+    position: 'absolute',
+    bottom: 0,
+    textAlign: 'center',
+    width: '100%',
+    marginBottom: '2vh',
+    color: 'transparent',
+    backgroundClip: 'text !important',
   },
 });
 

@@ -8,8 +8,13 @@ import themePrimary from './styles/themePrimary';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { fab } from '@fortawesome/free-brands-svg-icons';
+import jss from 'jss';
+import vendorPrefix from 'jss-plugin-vendor-prefixer';
+import preset from 'jss-preset-default';
 
 library.add(fab);
+jss.setup(preset());
+jss.use(vendorPrefix());
 
 function App() {
   return (

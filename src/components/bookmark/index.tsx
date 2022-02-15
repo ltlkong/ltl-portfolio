@@ -15,7 +15,7 @@ const Bookmark = ({ classes, className = '' }: IProps): ReactElement => {
 
   return (
     <div className={combineClasses(classes.Bookmark, className)}>
-      <h1>{firstCharOfRoute}</h1>
+      <h1 className={classes.Text}>{firstCharOfRoute}</h1>
     </div>
   );
 };

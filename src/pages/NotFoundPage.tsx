@@ -1,4 +1,4 @@
-import React, { ReactElement, useState } from 'react';
+import React, { ReactElement } from 'react';
 import Card from 'react-animated-3d-card';
 import meB from '../assets/imgs/meB.png';
 import generateGradient from '../utils/generateGradient';
@@ -6,7 +6,6 @@ import { useNavigate } from 'react-router-dom';
 
 const NotFoundPage = (): ReactElement => {
   const navigate = useNavigate();
-  const [isLoading, setIsLoading] = useState(true);
 
   return (
     <main
@@ -16,7 +15,6 @@ const NotFoundPage = (): ReactElement => {
       <div>
         <Card
           style={{
-            display: isLoading ? 'none' : 'block',
             background: generateGradient(),
             width: '20rem',
             cursor: 'pointer',
@@ -35,13 +33,7 @@ const NotFoundPage = (): ReactElement => {
               </h3>
             </div>
             <div style={{ marginTop: '-100px' }}>
-              <img
-                src={meB}
-                className="w-100"
-                onLoad={() => {
-                  setIsLoading(false);
-                }}
-              />
+              <img src={meB} className="w-100" />
             </div>
           </div>
         </Card>

@@ -33,7 +33,13 @@ const NotFoundPage = (): ReactElement => {
               </h3>
             </div>
             <div style={{ marginTop: '-100px' }}>
-              <img src={meB} className="w-100" />
+              <img
+                src={meB}
+                className="w-100"
+                style={{
+                  transition: 'height 1s',
+                }}
+              />
             </div>
           </div>
         </Card>

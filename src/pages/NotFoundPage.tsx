@@ -17,6 +17,8 @@ const NotFoundPage = (): ReactElement => {
             background: generateGradient(),
             width: '20rem',
             cursor: 'pointer',
+            userSelect: 'none',
+            '-webkit-user-select': 'none',
           }}
           onClick={() => navigate('/')}
         >

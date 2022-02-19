@@ -21,61 +21,95 @@ type Classes = WithStylesProps<typeof styles>;
 
 interface IProps extends Classes, DispatchToProps, StateToProps {}
 
-const HomePage = ({ classes, toggleLoading, isLoading, loadingLabel, homePageData }: IProps): ReactElement => {
-  return (
-    <PageLayout>
-      <Bookmark className={classes.Bookmark} />
-      <Main className={classes.Home}>
-        <section className={combineClasses(classes.Banner)}>
-          <ScrollAnimation animateIn="animate__animated animate__slideInLeft" animateOnce={true} delay={300}>
-            <div className={classes.Introduction}>
-              <h1>
-                <FlipChars>L</FlipChars>
-              </h1>
-              <div>
-                <Markdown>{homePageData.introShort}</Markdown>
-                <p className={classes.EmploymentStatus}>
-                  Currently an {homePageData.employeeStatus.title} at{' '}
-                  <strong>
-                    <a href={homePageData.employeeStatus.company.link} target="_blank">
-                      {homePageData.employeeStatus.company.name}
-                    </a>
-                  </strong>
-                </p>
-              </div>
-            </div>
-          </ScrollAnimation>
-        </section>
-        <section>
-          <div className={classes.About}>
-            <ScrollAnimation animateIn="animate__animated animate__slideInLeft" animateOnce={true} className={classes.AboutMeImgContainer}>
-              <img src={homePageData.myPicture} />
-            </ScrollAnimation>
-            <ScrollAnimation animateIn="animate__animated animate__slideInRight" animateOnce={true} className={'col-md-6 mt-4'}>
-              <h3>A BIT ABOUT ME</h3>
-              <Markdown>{homePageData.aboutMe}</Markdown>
-            </ScrollAnimation>
-          </div>
-        </section>
-        <section className={'p-4'}>
-          <h2>My Career path</h2>
-          <CareerTimeline className={classes.CareerTimeline} />
-        </section>
-      </Main>
-      <SocialAccountsBar className={classes.SocialAccountsBar} />
-      <CustomFooter className={classes.Footer} />
-    </PageLayout>
-  );
+const HomePage = ({
+    classes,
+    toggleLoading,
+    isLoading,
+    loadingLabel,
+    homePageData,
+}: IProps): ReactElement => {
+    return (
+        <PageLayout>
+            <Bookmark className={classes.Bookmark} />
+            <Main className={classes.Home}>
+                <section className={combineClasses(classes.Banner)}>
+                    <ScrollAnimation
+                        animateIn="animate__animated animate__slideInLeft"
+                        animateOnce={true}
+                        delay={300}
+                    >
+                        <div className={classes.Introduction}>
+                            <h1>
+                                <FlipChars>L</FlipChars>
+                            </h1>
+                            <div>
+                                <Markdown>{homePageData.introShort}</Markdown>
+                                <p className={classes.EmploymentStatus}>
+                                    Currently an{' '}
+                                    {homePageData.employeeStatus.title} at{' '}
+                                    <strong>
+                                        <a
+                                            href={
+                                                homePageData.employeeStatus
+                                                    .company.link
+                                            }
+                                            target="_blank"
+                                        >
+                                            {
+                                                homePageData.employeeStatus
+                                                    .company.name
+                                            }
+                                        </a>
+                                    </strong>
+                                </p>
+                            </div>
+                        </div>
+                    </ScrollAnimation>
+                </section>
+                <section>
+                    <div className={classes.About}>
+                        <ScrollAnimation
+                            animateIn="animate__animated animate__slideInLeft"
+                            animateOnce={true}
+                            className={classes.AboutMeImgContainer}
+                        >
+                            <img src={homePageData.myPicture} />
+                        </ScrollAnimation>
+                        <ScrollAnimation
+                            animateIn="animate__animated animate__slideInRight"
+                            animateOnce={true}
+                            className={'col-md-6 mt-4'}
+                        >
+                            <h3>A BIT ABOUT ME</h3>
+                            <Markdown>{homePageData.aboutMe}</Markdown>
+                        </ScrollAnimation>
+                    </div>
+                </section>
+                <section className={'p-4'}>
+                    <h2>My Career path</h2>
+                    <CareerTimeline className={classes.CareerTimeline} />
+                </section>
+            </Main>
+            <SocialAccountsBar className={classes.SocialAccountsBar} />
+            <CustomFooter className={classes.Footer} />
+        </PageLayout>
+    );
 };
 
-const mapStateToProps = ({ loading: { isLoading, label }, myInfo: { basicInfo } }: IRootState) => ({
-  isLoading,
-  loadingLabel: label,
-  homePageData: basicInfo,
+const mapStateToProps = ({
+    loading: { isLoading, label },
+    myInfo: { basicInfo },
+}: IRootState) => ({
+    isLoading,
+    loadingLabel: label,
+    homePageData: basicInfo,
 });
 
 const mapDispatchToProps = {
-  toggleLoading,
+    toggleLoading,
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(withStyles(styles)(HomePage));
+export default connect(
+    mapStateToProps,
+    mapDispatchToProps
+)(withStyles(styles)(HomePage));

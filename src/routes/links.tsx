@@ -13,7 +13,7 @@ const links = [
     {
         to: '/blog',
         name: 'Blog',
-        active: false,
+        active: true,
     },
 ];
 

@@ -1,7 +1,12 @@
 import React, { ReactElement } from 'react';
+import Editor from '../../components/editor';
 
 const BlogPage = (): ReactElement => {
-    return <div>Blog Page</div>;
+    return (
+        <div>
+            <Editor />
+        </div>
+    );
 };
 
 export default BlogPage;

@@ -1,0 +1,61 @@
+.gophers-container {
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 150;
+  overflow: hidden;
+}
+
+.gophers-container:hover .gophers {
+  right: -0.5em;
+  bottom: -1.5em;
+}
+.gophers-container .gophers {
+  right: -1em;
+  bottom: -2.6em;
+  width: 1.1em;
+  height: 3.2em;
+  border-radius: 1em;
+  border: 0.05em solid black;
+  transform: rotate(-30deg);
+  transition: all 0.8s;
+  background-color: transparent;
+}
+.gophers-container .gophers div:first-child,
+.gophers-container .gophers div:nth-child(2) {
+  width: 0.25em;
+  height: 0.25em;
+  background-color: black;
+  overflow: hidden;
+}
+.gophers-container .gophers div:first-child span,
+.gophers-container .gophers div:nth-child(2) span {
+  top: 0.02em;
+  left: 0.02em;
+  width: 0.1em;
+  height: 0.1em;
+  background-color: white;
+  transform-origin: bottom right;
+}
+.gophers-container .gophers div:first-child {
+  left: 0.15em;
+  top: 0.5em;
+}
+.gophers-container .gophers div:nth-child(2) {
+  right: 0.15em;
+  top: 0.5em;
+}
+.gophers-container .gophers div:nth-child(3) {
+  position: absolute;
+  right: 50%;
+  top: 1em;
+  width: 0.12em;
+  height: 0.35em;
+  background-color: black;
+  transform: translateX(50%);
+}
+
+.pa {
+  position: absolute;
+}

@@ -59,6 +59,7 @@ const Editor = (): ReactElement => {
     function handleKeypress(event: KeyboardEvent) {
         const { textValue, searchResult, cursorPosition, isPopupShowed } =
             state;
+        // Select from popup
         if (event.key === 'Enter' && isPopupShowed) {
             event.preventDefault();
 
@@ -91,7 +92,6 @@ const Editor = (): ReactElement => {
 
         if (isPrevCharIsAt && !isPopupShowed) {
             setState({ ...state, isPopupShowed: true });
-            console.log(1);
         }
     }
 

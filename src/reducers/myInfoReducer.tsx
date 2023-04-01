@@ -1,62 +1,62 @@
-import emptyObj from '../utils/emptyObj';
-import myPic from '../assets/imgs/mypic.jpeg';
+import emptyObj from "../utils/emptyObj";
+import myPic from "../assets/imgs/mypic.jpeg";
 
-type MyInfoActionTypes = 'GET' | 'EMPTY' | 'RELOAD';
+type MyInfoActionTypes = "GET" | "EMPTY" | "RELOAD";
 
 export interface IMyInfoAction {
   type: MyInfoActionTypes;
 }
 
 const basicInfo = {
-  name: 'Tielin Li',
-  emails: ['tielinli@yahoo.com'],
-  introShort: `Hey, I'm **Tielin Li**. I'm a **programmer** working on Full-Stack development.`,
+  name: "Tielin Li",
+  emails: ["tielinli@yahoo.com"],
+  introShort: `Hey, I'm **Tielin Li**. An experienced Full-Stack developer. Let's create something great!!`,
   employeeStatus: {
-    title: 'Application developer',
+    title: "Application developer",
     company: {
-      name: 'Pollard Banknote Ltd.',
-      link: 'https://www.pollardbanknote.com',
+      name: "Pollard Banknote Ltd.",
+      link: "https://www.pollardbanknote.com",
     },
   },
-  aboutMe: `Currently, I'm an Application developer working on the lottery app and web development at Pollard Banknote Ltd. Previously, I did internship at Rally the Locals as a web developer.`,
+  aboutMe: `Highly motivated software developer with 2 years of experience in the lottery industry, specializing in developing and maintaining complex web and mobile applications using React and Java.  `,
   myPicture: myPic,
 };
 
 const career = [
   {
-    title: 'Software Developer student',
+    title: "Software Developer student",
 
     company: {
-      name: 'College',
-      link: 'https://mitt.ca',
-      city: 'Winnipeg',
-      province: 'Manitoba',
+      name: "College",
+      link: "https://mitt.ca",
+      city: "Winnipeg",
+      province: "Manitoba",
     },
-    start: '9/20/2020',
-    end: '8/20/2021',
+    start: "9/20/2020",
+    end: "8/20/2021",
     description: null,
   },
   {
-    title: 'Software Developer',
+    title: "Software Developer",
     company: {
-      name: 'Rally the Locals',
-      link: 'https://www.rallythelocals.com',
-      city: 'Winnipeg',
-      province: 'Manitoba',
+      name: "Rally the Locals",
+      link: "https://www.rallythelocals.com",
+      city: "Winnipeg",
+      province: "Manitoba",
     },
-    start: '6/20/2021',
-    end: '8/20/2021',
+    start: "6/20/2021",
+    end: "8/20/2021",
     description: null,
   },
   {
-    title: 'Application Developer',
+    title: "Application Developer",
     company: {
-      name: 'Pollard Banknote Ltd.',
-      link: 'https://www.pollardbanknote.com',
-      city: 'Winnipeg',
-      province: 'Manitoba',
+      name: "Pollard Banknote Ltd.",
+      link: "https://www.pollardbanknote.com",
+      city: "Winnipeg",
+      province: "Manitoba",
     },
-    start: '1/10/2022',
+    start: "1/10/2022",
     end: null,
     description: null,
   },
@@ -64,24 +64,24 @@ const career = [
 
 const socialAccounts = {
   github: {
-    icon: 'fa-brands fa-github',
-    link: 'https://github.com/ltlkong',
+    icon: "fa-brands fa-github",
+    link: "https://github.com/ltlkong",
   },
   linkedin: {
-    icon: 'fa-brands fa-linkedin',
-    link: '',
+    icon: "fa-brands fa-linkedin",
+    link: "",
   },
   instagram: {
-    icon: 'fa-brands fa-instagram',
-    link: 'https://www.instagram.com/tielin_li/?hl=en',
+    icon: "fa-brands fa-instagram",
+    link: "https://www.instagram.com/tielin_li/?hl=en",
   },
   wechat: {
-    icon: 'fa-brands fa-weixin',
-    link: '',
+    icon: "fa-brands fa-weixin",
+    link: "",
   },
   bilibili: {
-    icon: 'fa-brands fa-bilibili',
-    link: 'https://space.bilibili.com/19474186?from=search&seid=567741156219813303&spm_id_from=333.337.0.0',
+    icon: "fa-brands fa-bilibili",
+    link: "https://space.bilibili.com/19474186?from=search&seid=567741156219813303&spm_id_from=333.337.0.0",
   },
 };
 
@@ -95,11 +95,11 @@ const myInfoReducer = (state = initialState, action: IMyInfoAction) => {
   const { type } = action;
 
   switch (type) {
-    case 'GET':
+    case "GET":
       return state;
-    case 'EMPTY':
+    case "EMPTY":
       return emptyObj(state);
-    case 'RELOAD':
+    case "RELOAD":
       return initialState;
     default:
       return state;

@@ -69,7 +69,7 @@ const socialAccounts = {
   },
   linkedin: {
     icon: "fa-brands fa-linkedin",
-    link: "",
+    link: "https://www.linkedin.com/in/tielin-li-a3335820b/",
   },
   instagram: {
     icon: "fa-brands fa-instagram",

@@ -38,10 +38,7 @@ const AppLayout = ({
   useEffect(() => {
     startLoading();
     reloadInfoData();
-
-    setTimeout(() => {
-      stopLoading();
-    }, 3000);
+    stopLoading();
   }, []);
 
   useEffect(() => {

@@ -48,7 +48,7 @@ const AppLayout = ({
     scrollToTheTop();
   }, [location]);
 
-  if (isLoading) return <Loading />;
+  if (isLoading) return <></>;
 
   if (!links.find((link) => link.to === location.pathname && link.active))
     return <NotFoundPage />;

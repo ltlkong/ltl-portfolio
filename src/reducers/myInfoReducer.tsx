@@ -12,10 +12,10 @@ const basicInfo = {
   emails: ["tielinli@yahoo.com"],
   introShort: `Hey, I'm **Tielin Li**. An experienced Full-Stack developer. Let's create something great!!`,
   employeeStatus: {
-    title: "Application developer",
+    title: "CS student",
     company: {
-      name: "Pollard Banknote Ltd.",
-      link: "https://www.pollardbanknote.com",
+      name: "The University of British Columbia",
+      link: "https://www.ubc.ca",
     },
   },
   aboutMe: `Highly motivated software developer with 2 years of experience in the lottery industry, specializing in developing and maintaining complex web and mobile applications using React and Java.  `,
@@ -37,7 +37,7 @@ const career = [
     description: null,
   },
   {
-    title: "Software Developer",
+    title: "Web Developer",
     company: {
       name: "Rally the Locals",
       link: "https://www.rallythelocals.com",
@@ -57,6 +57,18 @@ const career = [
       province: "Manitoba",
     },
     start: "1/10/2022",
+    end: "6/10/2024",
+    description: null,
+  },
+  {
+    title: "CS student",
+    company: {
+      name: "The University of British Columbia",
+      link: "https://www.ubc.ca",
+      city: "Kelowna",
+      province: "British Columbia",
+    },
+    start: "9/1/2024",
     end: null,
     description: null,
   },
